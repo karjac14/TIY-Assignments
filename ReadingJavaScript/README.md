@@ -1,4 +1,3 @@
-# TIY-Assignments
 
 ##  Basic Literal Types types in Javascript:
 
