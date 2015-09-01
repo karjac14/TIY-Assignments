@@ -1,7 +1,7 @@
 
 ##  Basic Literal Types types in Javascript:
 
-* **Null** - its basically a zero or no value. 
+* **Null** - its basically an "empty" or no value. 
     _Example is guess what... `null`._
 * **Boolean** - its has a range of just true or false value, no gray area. 
     _Example: `True`, `False`_
