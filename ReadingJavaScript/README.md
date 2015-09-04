@@ -35,3 +35,17 @@
 * **Infinity** - it is numerical value that is infinite. In mathematics algebra, the symbol is ∞.
 
       _Example: `5 / 0;` will result `infinity`. The a number divided by zero is infinity, same as in mathematics._
+
+##  Control Flow in Javascript:
+
+{}
+
+If/else
+
+for 
+
+while
+
+do/while
+
+switch/case
