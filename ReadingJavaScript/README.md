@@ -1,4 +1,5 @@
 
+01-Assignment
 ##  Basic Literal Types types in Javascript:
 
 * **Null** - its basically an "empty" or no value. 
@@ -36,13 +37,23 @@
 
       _Example: `5 / 0;` will result `infinity`. The a number divided by zero is infinity, same as in mathematics._
 
+02 - Assignment
+
+* 'Typeof' - an operator that returns the type of the an operand.
+
+      _Example: `typeof "myName"; ` will result `"string"`
+      
+* 'Function' - refers to a subprogram that are consisted of set of operations and statements. `Function` are ussually are being called or invoked to to perform the set of operations.
+
+
+03 - Assignment
 ##  Control Flow in Javascript:
 
-{}
+* **Block Operators** "{}" - are consisted of two curly braces, where in set of statements are coded inside. These statements are ussually integrated with each other to do certain complex logic. 
 
-If/else
+If/else - is a conditional statement that has set of commands that executes `if` a specified condition is `true`. while a clause `else` executed commands when the condition is `false`.
 
-for 
+for  
 
 while
 
