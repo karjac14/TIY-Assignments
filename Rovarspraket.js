@@ -50,6 +50,14 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
  */
 function maxOfThree(A, B, C){
     // YOUR CODE HERE
+    if (A > B && A > C) {
+      return A;
+    } else if (B > C && B > A ){
+      return B;
+    } else {
+      return C;
+    }
+    //return Math.max (A,B,C);
 }
 
 /**
@@ -67,15 +75,24 @@ console.assert(isVowel("a") === true);
 console.assert(isVowel("E") === true);
 
 // What should _this_ do?
-// console.assert(isVowel("AEIOU") === FILL_ME_IN);
+console.assert(isVowel("AEIOU") === false);
 
 /**
  * @param {String} char of length 1
  * @return {Boolean} whether `char` is an English vowel
  */
 function isVowel(char){
-    // YOUR CODE HERE
+//  if (typeof char != "string") { /* only string is either vowel or not*/
+//    return false;
+//  }
+    if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u" || char === "A" || char === "E" || char === "I" || char === "O" || char === "U") {
+    return true;
+  } else {
+    return false;
+  }
+
 }
+
 
 /**
  * The `disemvowel` function combats the Internet
@@ -86,13 +103,16 @@ function isVowel(char){
  * @return {String} cmmnt dsmvwld
  */
 function disemvowel(comment){
-  // YOUR CODE HERE
+    var cmmnt = "";
+  for (var i=0; i < comment.length; i++ ) {
+    if (isVowel(comment[i]) === false ) {
+      cmmnt = cmmnt.concat(comment[i]);
+    }
+  }
+  return cmmnt;
 }
-
 // Shorter test cases might be appreciated...
-console.assert(
-  disemvowel("This website is for losers LOL!") === "Ths wbst s fr lsrs LL!"
-);
+console.assert(disemvowel("This website is for losers LOL!") === "Ths wbst s fr lsrs LL!");
 
 /**
  * The function `rovarspraket` will translate text into
@@ -108,12 +128,25 @@ console.assert(
  * @return {String} translation
  */
 function rovarspraket(input){
-    // YOUR CODE HERE
+    var translation = "";
+    if (typeof input != 'string'){
+      var num = input.toString();
+      translation = num;
+    } else {
+        for (var i = 0; i <input.length; i++ ) {
+          if (isVowel(input[i]) === true) {
+            translation = translation.concat(input[i]);
+            } else if (isVowel(input[i]) === false) {
+              translation = translation.concat(input[i]+"o"+input[i]);
+              }
+          }
+      }
+      return translation;
 }
 
 // Feel free to provide additional examples...
+console.assert(rovarspraket(0) === "0")
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
 console.assert(rovarspraket("cat") === "cocatot")
 console.assert(rovarspraket("javascript") === "jojavovasoscocroripoptot")
-console.assert(rovarspraket(0) === "0")
