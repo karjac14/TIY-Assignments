@@ -49,6 +49,8 @@ function toEnglish(value){
     var cents = " & " + str[str.length-2] + str[str.length-1] + "/100s";
     var j = (str.length - 4);  //position ###X.##
     var k = (str.length - 5);  //position ##X#.##
+    var l = (str.length - 6);  //position #X##.##
+    var m = (str.length - 7);  //position X###.##
     var tens = str[k]+str[j];
     var tens1= str[j];
     var ones ="";
@@ -82,7 +84,7 @@ function toEnglish(value){
         tens = "nine";
         break;
       }
-        if (str[k] === "1")
+    } else if (str[k] === "1"){
       switch (tens)  {
         case "10":
         tens = "ten";
@@ -117,11 +119,38 @@ function toEnglish(value){
       }
     } else if (str[k]+str[j] === "20"){
         tens = "twenty";
-    } else if (str[k] === "2" || str[j] != "0"){
-        tens = "twenty " + num(str[j]);
+    } else if (str[k] === "2" && str[j] != "0"){
+        tens = "twenty" + num(str[j]);
     } else if (str[k]+str[j] === "30"){
         tens = "thirty";
+    } else if (str[k] === "3" && str[j] != "0"){
+        tens = "thirty " + num(str[j]);
+    } else if (str[k]+str[j] === "40"){
+        tens = "forty";
+    } else if (str[k] === "4" && str[j] != "0"){
+        tens = "forty " + num(str[j]);
+    } else if (str[k]+str[j] === "50"){
+        tens = "fifty";
+    } else if (str[k] === "5" && str[j] != "0"){
+        tens = "fifty " + num(str[j]);
+    } else if (str[k]+str[j] === "60"){
+        tens = "sixty";
+    } else if (str[k] === "6" && str[j] != "0"){
+        tens = "sixty " + num(str[j]);
+    } else if (str[k]+str[j] === "70"){
+        tens = "seventy";
+    } else if (str[k] === "7" && str[j] != "0"){
+        tens = "seventy " + num(str[j]);
+    } else if (str[k]+str[j] === "80"){
+        tens = "eighty";
+    } else if (str[k] === "8" && str[j] != "0"){
+        tens = "eighty " + num(str[j]);
+    } else if (str[k]+str[j] === "90"){
+        tens = "ninety";
+    } else if (str[k] === "9" && str[j] != "0"){
+        tens = "ninety " + num(str[j]);
     }
+var hundreds;
 
 return tens+cents;
 
@@ -161,8 +190,10 @@ function num (digit) {
 
 test('BEAST MODE: toEnglish', function(){
   assert.isFunction(toEnglish);
-//  assert.equal(toEnglish(1.23), "one & 23/100s");
+  assert.equal(toEnglish(1.23), "one & 23/100s");
   assert.equal(toEnglish(12.34), "twelve & 34/100s");
+  assert.equal(toEnglish(17.44), "seventeen & 44/100s");
+  assert.equal(toEnglish(97.56), "ninety seven & 56/100s");
   //assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
   //assert.equal(toCheck(1234.56), "one thousand, two hundred thirty four & 56/100s");
   // you might need to try some values in between...
