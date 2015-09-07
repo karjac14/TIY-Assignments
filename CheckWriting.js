@@ -156,8 +156,8 @@ test('toEnglish: `21` to `30`', function(){
 //[Beast Mode]
 
 function toCheck(value){
-    var raw = value.toFixed(2);
-    var str = raw.toString();
+    var raw = value.toFixed(2); //make the all numbers to have two decimals is 5 = 5.00, 4.6 = 4.60
+    var str = raw.toString();  // convert number to string
     var i = str.length;        //position ####.#X
     var cents = "& " + str[str.length-2] + str[str.length-1] + "/100s";
     var j = (str.length - 4);  //position ###X.##
@@ -171,6 +171,9 @@ function toCheck(value){
     var ones ="";
     if (k === -1 && l === -2 && m === -3){
     switch (tens1) {
+        case "0":
+        tens = "zero ";
+        break;
         case "1":
         tens = "one ";
         break;
@@ -378,9 +381,11 @@ function num (digit) {
 
 test('BEAST MODE: toCheck', function(){
   assert.isFunction(toCheck);
+  assert.equal(toCheck(0.00), "zero & 00/100s");
   assert.equal(toCheck(1.23), "one & 23/100s");
   assert.equal(toCheck(12.34), "twelve & 34/100s");
   assert.equal(toCheck(17.44), "seventeen & 44/100s");
+  assert.equal(toCheck(33.33), "thirty three & 33/100s");
   assert.equal(toCheck(97.56), "ninety seven & 56/100s");
   assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
   assert.equal(toCheck(1234.56), "one thousand, two hundred thirty four & 56/100s");
