@@ -1,6 +1,6 @@
 var test = require('mocha').it,
   assert = require('chai').assert;
-
+/*
 test('toEnglish: `0` to `9`', function(){
   assert.isDefined(toEnglish);
   assert.isFunction(toEnglish);
@@ -37,123 +37,133 @@ test('toEnglish: `21` to `30`', function(){
   assert.equal(toEnglish(29), "twenty nine");
   assert.equal(toEnglish(29), "twenty nine");
 }); // END test(toEnglish)
-
+/*
 /**
  * @param {Number} value to convert to English number word
  * @return {String} representing `value` in English
  */
 function toEnglish(value){
-    var word = "";
-    if (value <= 20) {
-      switch (value) {
-        case 0:
-        word = "zero";
+    var raw = value.toFixed(2);
+    var str = raw.toString();
+    var i = str.length;        //position ####.#X
+    var cents = " & " + str[str.length-2] + str[str.length-1] + "/100s";
+    var j = (str.length - 4);  //position ###X.##
+    var k = (str.length - 5);  //position ##X#.##
+    var tens = str[k]+str[j];
+    var tens1= str[j];
+    var ones ="";
+    if (k === -1){
+    switch (tens1) {
+        case "1":
+        tens = "one";
         break;
-        case 1:
-        word ="one";
+        case "2":
+        tens = "two";
         break;
-        case 2:
-        word ="two";
+        case "3":
+        tens = "three";
         break;
-        case 3:
-        word ="three";
+        case "4":
+        tens = "four";
         break;
-        case 4:
-        word ="four";
+        case "5":
+        tens = "five";
         break;
-        case 5:
-        word ="five";
+        case "6":
+        tens = "six";
         break;
-        case 6:
-        word ="six";
+        case "7":
+        tens = "seven";
         break;
-        case 7:
-        word ="seven";
+        case "8":
+        tens = "eight";
         break;
-        case 8:
-        word ="eight";
-        break;
-        case 9:
-        word ="nine";
-        break;
-        case 10:
-        word ="ten";
-        break;
-        case 11:
-        word ="eleven";
-        break;
-        case 12:
-        word ="twelve";
-        break;
-        case 13:
-        word ="thirteen";
-        break;
-        case 14:
-        word ="fourteen";
-        break;
-        case 15:
-        word ="fifteen";
-        break;
-        case 16:
-        word ="sixteen";
-        break;
-        case 17:
-        word ="seventeen";
-        break;
-        case 18:
-        word ="eighteen";
-        break;
-        case 19:
-        word ="nineteen";
-        break;
-        case 20:
-        word ="twenty";
+        case "9":
+        tens = "nine";
         break;
       }
-    } else if (value <=29 && value >20 ){
-      word = "twenty" + " " + ones(value[1]);
+        if (str[k] === "1")
+      switch (tens)  {
+        case "10":
+        tens = "ten";
+        break;
+        case "11":
+        tens = "eleven";
+        break;
+        case "12":
+        tens = "twelve";
+        break;
+        case "13":
+        tens = "thirteen";
+        break;
+        case "14":
+        tens = "fourteen";
+        break;
+        case "15":
+        tens = "fifteen";
+        break;
+        case "16":
+        tens = "sixteen";
+        break;
+        case "17":
+        tens = "seventeen";
+        break;
+        case "18":
+        tens = "eighteen";
+        break;
+        case "19":
+        tens = "nineteen";
+        break;
+      }
+    } else if (str[k]+str[j] === "20"){
+        tens = "twenty";
+    } else if (str[k] === "2" || str[j] != "0"){
+        tens = "twenty " + num(str[j]);
+    } else if (str[k]+str[j] === "30"){
+        tens = "thirty";
     }
-    return word;
-}
-  // start simply and refactor...
- function ones (one) {
-   switch (one) {
-     case 1:
-     return "one";
-     break;
-     return "two";
-     break;
-     case 3:
-     return "three";
-     break;
-     case 4:
-     return "four";
-     break;
-     case 5:
-     return "five";
-     break;
-     case 6:
-     return "six";
-     break;
-     case 7:
-     return "seven";
-     break;
-     case 8:
-     return "eight";
-     break;
-     case 9:
-     return "nine";
-     break;
- }
+
+return tens+cents;
 
 }
+//console.log (toEnglish(Number(01.45))
 
-/*test('BEAST MODE: toCheck', function(){
-  assert.isFunction(toCheck);
-  assert.equal(toCheck(1.23), "one & 23/100s");
-  assert.equal(toCheck(12.34), "twelve & 34/100s");
-  assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
-  assert.equal(toCheck(1234.56), "one thousand, two hundred thirty four & 56/100s");
+function num (digit) {
+  switch (digit) {
+      case "1":
+      return "one";
+      break;
+      case "2":
+      return "two";
+      break;
+      case "3":
+      return "three";
+      break;
+      case "4":
+      return "four";
+      break;
+      case "5":
+      return "five";
+      break;
+      case "6":
+      return "six";
+      break;
+      case "7":
+      return "seven";
+      break;
+      case "8":
+      return "eight";
+      break;
+      case "9":
+      return "nine";
+}
+}
+
+test('BEAST MODE: toEnglish', function(){
+  assert.isFunction(toEnglish);
+//  assert.equal(toEnglish(1.23), "one & 23/100s");
+  assert.equal(toEnglish(12.34), "twelve & 34/100s");
+  //assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
+  //assert.equal(toCheck(1234.56), "one thousand, two hundred thirty four & 56/100s");
   // you might need to try some values in between...
 }); // END test(BEAST MODE)
-*/
