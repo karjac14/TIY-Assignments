@@ -38,9 +38,28 @@
 
 ##  Control Flow in Javascript:
 
-{}
+* **Block Statement {}** - is a block statement that is used to group statements. The block is delimited by a pair of curly brackets.
 
-If/else
+    _Example:_ 
+
+        ```{ var x =1; var y = 3;
+          return x * y;
+        }```
+        
+    _the three statements, are in all delimited by two curly braces._
+
+* **If/else** - is a conditional statement that consist of ```if``` statement to execute a statement if a logical condition is true. And optional ```else``` clause to execute a statement if the condition is false.
+
+    _Example:_ 
+
+        ```if (true) { 
+          return x * y;
+        } else {
+          return x /y ;
+        }```
+        
+    _the `if` statement does multiply operation as the logical condition is `true`._
+
 
 for 
 
@@ -48,4 +67,22 @@ while
 
 do/while
 
-switch/case
+switch/case - A `switch` statement allows a program to evaluate an expression and attempt to match the expression's value to a `case` label. If a match is found, the program executes the associated statement.
+
+    _Example:_ 
+
+        ```switch (num) { 
+          case 1:
+            return "one";
+            break;
+          case 2:
+            return "two";
+            break;
+  
+            default:
+            return "Please choose 1 or 2 only";
+            break;
+            }
+        
+    _the `if` statement does multiply operation as the logical condition is `true`._
+
