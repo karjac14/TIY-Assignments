@@ -46,7 +46,7 @@ function toCheck(value){
     var raw = value.toFixed(2);
     var str = raw.toString();
     var i = str.length;        //position ####.#X
-    var cents = " & " + str[str.length-2] + str[str.length-1] + "/100s";
+    var cents = "& " + str[str.length-2] + str[str.length-1] + "/100s";
     var j = (str.length - 4);  //position ###X.##
     var k = (str.length - 5);  //position ##X#.##
     var l = (str.length - 6);  //position X##.##
@@ -59,69 +59,71 @@ function toCheck(value){
     if (k === -1 && l === -2 && m === -3){
     switch (tens1) {
         case "1":
-        tens = "one";
+        tens = "one ";
         break;
         case "2":
-        tens = "two";
+        tens = "two ";
         break;
         case "3":
-        tens = "three";
+        tens = "three ";
         break;
         case "4":
-        tens = "four";
+        tens = "four ";
         break;
         case "5":
-        tens = "five";
+        tens = "five ";
         break;
         case "6":
-        tens = "six";
+        tens = "six ";
         break;
         case "7":
-        tens = "seven";
+        tens = "seven ";
         break;
         case "8":
-        tens = "eight";
+        tens = "eight ";
         break;
         case "9":
-        tens = "nine";
+        tens = "nine ";
         break;
       }
     } else if (str[k] === "1"){
       switch (tens)  {
         case "10":
-        tens = "ten";
+        tens = "ten ";
         break;
         case "11":
-        tens = "eleven";
+        tens = "eleven ";
         break;
         case "12":
-        tens = "twelve";
+        tens = "twelve ";
         break;
         case "13":
-        tens = "thirteen";
+        tens = "thirteen ";
         break;
         case "14":
-        tens = "fourteen";
+        tens = "fourteen ";
         break;
         case "15":
-        tens = "fifteen";
+        tens = "fifteen ";
         break;
         case "16":
-        tens = "sixteen";
+        tens = "sixteen ";
         break;
         case "17":
-        tens = "seventeen";
+        tens = "seventeen ";
         break;
         case "18":
-        tens = "eighteen";
+        tens = "eighteen ";
         break;
         case "19":
-        tens = "nineteen";
+        tens = "nineteen ";
         break;
         case "00":
         tens = "";
         break;
       }
+    } else if (str[k]+str[j] === "00"){
+        tens = "";
     } else if (str[k]+str[j] === "20"){
         tens = "twenty";
     } else if (str[k] === "2" && str[j] != "0"){
@@ -233,31 +235,31 @@ return thousands+hundreds+tens+cents;
 function num (digit) {
   switch (digit) {
       case "1":
-      return "one";
+      return "one ";
       break;
       case "2":
-      return "two";
+      return "two ";
       break;
       case "3":
-      return "three";
+      return "three ";
       break;
       case "4":
-      return "four";
+      return "four ";
       break;
       case "5":
-      return "five";
+      return "five ";
       break;
       case "6":
-      return "six";
+      return "six ";
       break;
       case "7":
-      return "seven";
+      return "seven ";
       break;
       case "8":
-      return "eight";
+      return "eight ";
       break;
       case "9":
-      return "nine";
+      return "nine ";
 }
 }
 
