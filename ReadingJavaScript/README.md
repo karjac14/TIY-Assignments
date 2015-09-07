@@ -69,6 +69,15 @@
         } 
         
     _the `for` loop statement above does execute the multiplication operation as the conditon of `i` reached the conditional statement `i < x`. The `i++` serves as the counter to increment the value of `i`. _
+    
+* **for...in Loop** The for...in statement iterates a specified variable over all the enumerable properties of an object.
+     _Example:_ 
+
+        ```for( var i in z) { 
+          return x * y;
+        } 
+        
+    _the `for...in` loop statement above does execute the multiplication operation once for all the enumerable properties of the object `z`.
 
 * **while Loop** - A while statement executes its statements as long as a specified condition evaluates to true. 
 
