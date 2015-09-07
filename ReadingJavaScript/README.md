@@ -38,14 +38,84 @@
 
 ##  Control Flow in Javascript:
 
-{}
+* **Block Statement {}** - is a block statement that is used to group statements. The block is delimited by a pair of curly brackets.
 
-If/else
+    _Example:_ 
 
-for 
+        ```{ var x =1; var y = 3;
+          return x * y;
+        }```
+        
+    _the three statements, are in all delimited by two curly braces._
 
-while
+* **If/else** - is a conditional statement that consist of ```if``` statement to execute a statement if a logical condition is true. And optional ```else``` clause to execute a statement if the condition is false.
 
-do/while
+    _Example:_ 
 
-switch/case
+        ```if (true) { 
+          return x * y;
+        } else {
+          return x /y ;
+        }```
+        
+    _the `if` statement does multiply operation as the logical condition is `true`._
+
+* **for Loop** A for loop repeats until a specified condition evaluates to false.
+
+     _Example:_ 
+
+        ```for( var i= 0; i < x; i++) { 
+          return x * y;
+        } 
+        
+    _the `for` loop statement above does execute the multiplication operation as the conditon of `i` reached the conditional statement `i < x`. The `i++` serves as the counter to increment the value of `i`. _
+    
+* **for...in Loop** The for...in statement iterates a specified variable over all the enumerable properties of an object.
+     _Example:_ 
+
+        ```for( var i in z) { 
+          return x * y;
+        } 
+        
+    _the `for...in` loop statement above does execute the multiplication operation once for all the enumerable properties of the object `z`.
+
+* **while Loop** - A while statement executes its statements as long as a specified condition evaluates to true. 
+
+    _Example:_ 
+
+        ```while (i < x)  { 
+          return x * y;
+          i++
+        } 
+        
+    _the `while` loop statement above does execute the multiplication operation and will repeat as long as the `while` condition is `true`. _
+
+* **do/while** - The `do...while` statement repeats until a specified condition evaluates to false. This loop is  different from the `while` loop as this executes the statements the forst time without condition. If the consition is still logically true, then the loop iterates again until the condition becaome false.
+* 
+    _Example:_ 
+
+        ```do  { 
+          return x * y;
+          i++
+        } while (i < x)
+        
+    _the `do while` loop statement above does execute the multiplication operation once and will repeat as long as the `while` condition is `true`. _
+
+* **switch/case** - A `switch` statement allows a program to evaluate an expression and attempt to match the expression's value to a `case` label. If a match is found, the program executes the associated statement.
+
+    _Example:_ 
+
+        ```switch (num) { 
+          case 1:
+            return "one";
+            break;
+          case 2:
+            return "two";
+            break;
+            default:
+            return "Please choose 1 or 2 only";
+            break;
+            }
+        
+    _the `if` statement does multiply operation as the logical condition is `true`._
+
