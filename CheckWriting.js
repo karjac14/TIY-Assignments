@@ -42,19 +42,21 @@ test('toEnglish: `21` to `30`', function(){
  * @param {Number} value to convert to English number word
  * @return {String} representing `value` in English
  */
-function toEnglish(value){
+function toCheck(value){
     var raw = value.toFixed(2);
     var str = raw.toString();
     var i = str.length;        //position ####.#X
     var cents = " & " + str[str.length-2] + str[str.length-1] + "/100s";
     var j = (str.length - 4);  //position ###X.##
     var k = (str.length - 5);  //position ##X#.##
-    var l = (str.length - 6);  //position #X##.##
+    var l = (str.length - 6);  //position X##.##
     var m = (str.length - 7);  //position X###.##
-    var tens = str[k]+str[j];
     var tens1= str[j];
+    var tens = str[k]+str[j];
+    var hundreds = str[l];
+    var thousands = str[m];
     var ones ="";
-    if (k === -1){
+    if (k === -1 && l === -2 && m === -3){
     switch (tens1) {
         case "1":
         tens = "one";
@@ -120,7 +122,7 @@ function toEnglish(value){
     } else if (str[k]+str[j] === "20"){
         tens = "twenty";
     } else if (str[k] === "2" && str[j] != "0"){
-        tens = "twenty" + num(str[j]);
+        tens = "twenty " + num(str[j]);
     } else if (str[k]+str[j] === "30"){
         tens = "thirty";
     } else if (str[k] === "3" && str[j] != "0"){
@@ -150,11 +152,43 @@ function toEnglish(value){
     } else if (str[k] === "9" && str[j] != "0"){
         tens = "ninety " + num(str[j]);
     }
-var hundreds;
-
+if (l != undefined){
+    switch (hundreds){
+      case "1":
+      hundreds = "one hundred ";
+      break;
+      case "2":
+      hundreds = "two hundred ";
+      break;
+      case "3":
+      hundreds = "three hundred ";
+      break;
+      case "4":
+      hundreds = "four hundred ";
+      break;
+      case "5":
+      hundreds = "five hundred ";
+      break;
+      case "6":
+      hundreds = "six hundred ";
+      break;
+      case "7":
+      hundreds = "seven hundred ";
+      break;
+      case "8":
+      hundreds = "eight hundred ";
+      break;
+      case "9":
+      hundreds = "nine hundred ";
+    }
+  }
+if (value < 99.99){
 return tens+cents;
-
+} else if (value < 999.99 && value >99.99 ) {
+return hundreds+tens+cents;
 }
+}
+
 //console.log (toEnglish(Number(01.45))
 
 function num (digit) {
@@ -188,13 +222,13 @@ function num (digit) {
 }
 }
 
-test('BEAST MODE: toEnglish', function(){
-  assert.isFunction(toEnglish);
-  assert.equal(toEnglish(1.23), "one & 23/100s");
-  assert.equal(toEnglish(12.34), "twelve & 34/100s");
-  assert.equal(toEnglish(17.44), "seventeen & 44/100s");
-  assert.equal(toEnglish(97.56), "ninety seven & 56/100s");
-  //assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
+test('BEAST MODE: toCheck', function(){
+  assert.isFunction(toCheck);
+  assert.equal(toCheck(1.23), "one & 23/100s");
+  assert.equal(toCheck(12.34), "twelve & 34/100s");
+  assert.equal(toCheck(17.44), "seventeen & 44/100s");
+  assert.equal(toCheck(97.56), "ninety seven & 56/100s");
+  assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
   //assert.equal(toCheck(1234.56), "one thousand, two hundred thirty four & 56/100s");
   // you might need to try some values in between...
 }); // END test(BEAST MODE)
