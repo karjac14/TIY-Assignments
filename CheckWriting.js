@@ -118,6 +118,9 @@ function toCheck(value){
         case "19":
         tens = "nineteen";
         break;
+        case "00":
+        tens = "";
+        break;
       }
     } else if (str[k]+str[j] === "20"){
         tens = "twenty";
@@ -152,7 +155,7 @@ function toCheck(value){
     } else if (str[k] === "9" && str[j] != "0"){
         tens = "ninety " + num(str[j]);
     }
-if (l != undefined){
+if (l > -1){
     switch (hundreds){
       case "1":
       hundreds = "one hundred ";
@@ -180,12 +183,48 @@ if (l != undefined){
       break;
       case "9":
       hundreds = "nine hundred ";
+      break;
+      case "0":
+      hundreds = "";
+      break;
     }
   }
+  if (m > -1){
+      switch (thousands){
+        case "1":
+        thousands = "one thousand, "
+        break;
+        case "2":
+        thousands = "two thousand, ";
+        break;
+        case "3":
+        thousands = "three thousand, ";
+        break;
+        case "4":
+        thousands = "four thousand, ";
+        break;
+        case "5":
+        thousands = "five thousand, ";
+        break;
+        case "6":
+        thousands = "six thousand, ";
+        break;
+        case "7":
+        thousands = "seven thousand, ";
+        break;
+        case "8":
+        thousands = "eight thousand, ";
+        break;
+        case "9":
+        thousands = "nine thousand, ";
+      }
+    }
 if (value < 99.99){
 return tens+cents;
 } else if (value < 999.99 && value >99.99 ) {
 return hundreds+tens+cents;
+} else if (value < 9999.99 && value >999.99 ){
+return thousands+hundreds+tens+cents;
 }
 }
 
@@ -229,6 +268,7 @@ test('BEAST MODE: toCheck', function(){
   assert.equal(toCheck(17.44), "seventeen & 44/100s");
   assert.equal(toCheck(97.56), "ninety seven & 56/100s");
   assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
-  //assert.equal(toCheck(1234.56), "one thousand, two hundred thirty four & 56/100s");
+  assert.equal(toCheck(1234.56), "one thousand, two hundred thirty four & 56/100s");
+  assert.equal(toCheck(4000.00), "four thousand, & 00/100s");
   // you might need to try some values in between...
 }); // END test(BEAST MODE)
