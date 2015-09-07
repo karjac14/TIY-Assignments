@@ -1,6 +1,6 @@
 var test = require('mocha').it,
   assert = require('chai').assert;
-/*
+
 test('toEnglish: `0` to `9`', function(){
   assert.isDefined(toEnglish);
   assert.isFunction(toEnglish);
@@ -36,12 +36,125 @@ test('toEnglish: `21` to `30`', function(){
   assert.equal(toEnglish(29), "twenty nine");
   assert.equal(toEnglish(29), "twenty nine");
   assert.equal(toEnglish(29), "twenty nine");
+  assert.equal(toEnglish(30), "thirty");
 }); // END test(toEnglish)
 /*
 /**
  * @param {Number} value to convert to English number word
  * @return {String} representing `value` in English
  */
+ function toEnglish(value){
+     var word = "";
+     if (value <= 20) {
+       switch (value) {
+         case 0:
+         word = "zero";
+         break;
+         case 1:
+         word ="one";
+         break;
+         case 2:
+         word ="two";
+         break;
+         case 3:
+         word ="three";
+         break;
+         case 4:
+         word ="four";
+         break;
+         case 5:
+         word ="five";
+         break;
+         case 6:
+         word ="six";
+         break;
+         case 7:
+         word ="seven";
+         break;
+         case 8:
+         word ="eight";
+         break;
+         case 9:
+         word ="nine";
+         break;
+         case 10:
+         word ="ten";
+         break;
+         case 11:
+         word ="eleven";
+         break;
+         case 12:
+         word ="twelve";
+         break;
+         case 13:
+         word ="thirteen";
+         break;
+         case 14:
+         word ="fourteen";
+         break;
+         case 15:
+         word ="fifteen";
+         break;
+         case 16:
+         word ="sixteen";
+         break;
+         case 17:
+         word ="seventeen";
+         break;
+         case 18:
+         word ="eighteen";
+         break;
+         case 19:
+         word ="nineteen";
+         break;
+         case 20:
+         word ="twenty";
+         break;
+       }
+     } else if (value <=29 && value >20 ){
+       value = value - 20;
+       word = "twenty " + ones(value);
+
+     } else if (value = 30){
+       word = "thirty";
+   }
+   return word;
+ }
+   // start simply and refactor...
+  function ones (one) {
+    switch (one) {
+      case 1:
+      return "one";
+      break;
+      return "two";
+      break;
+      case 3:
+      return "three";
+      break;
+      case 4:
+      return "four";
+      break;
+      case 5:
+      return "five";
+      break;
+      case 6:
+      return "six";
+      break;
+      case 7:
+      return "seven";
+      break;
+      case 8:
+      return "eight";
+      break;
+      case 9:
+      return "nine";
+      break;
+  }
+
+ }
+// ########################################################
+//[Beast Mode]
+
 function toCheck(value){
     var raw = value.toFixed(2);
     var str = raw.toString();
