@@ -60,14 +60,39 @@
         
     _the `if` statement does multiply operation as the logical condition is `true`._
 
+* **for Loop** A for loop repeats until a specified condition evaluates to false.
 
-for 
+     _Example:_ 
 
-while
+        ```for( var i= 0; i < x; i++) { 
+          return x * y;
+        } 
+        
+    _the `for` loop statement above does execute the multiplication operation as the conditon of `i` reached the conditional statement `i < x`. The `i++` serves as the counter to increment the value of `i`. _
 
-do/while
+* **while Loop** - A while statement executes its statements as long as a specified condition evaluates to true. 
 
-switch/case - A `switch` statement allows a program to evaluate an expression and attempt to match the expression's value to a `case` label. If a match is found, the program executes the associated statement.
+    _Example:_ 
+
+        ```while (i < x)  { 
+          return x * y;
+          i++
+        } 
+        
+    _the `while` loop statement above does execute the multiplication operation and will repeat as long as the `while` condition is `true`. _
+
+* **do/while** - The `do...while` statement repeats until a specified condition evaluates to false. This loop is  different from the `while` loop as this executes the statements the forst time without condition. If the consition is still logically true, then the loop iterates again until the condition becaome false.
+* 
+    _Example:_ 
+
+        ```do  { 
+          return x * y;
+          i++
+        } while (i < x)
+        
+    _the `do while` loop statement above does execute the multiplication operation once and will repeat as long as the `while` condition is `true`. _
+
+* **switch/case** - A `switch` statement allows a program to evaluate an expression and attempt to match the expression's value to a `case` label. If a match is found, the program executes the associated statement.
 
     _Example:_ 
 
@@ -78,7 +103,6 @@ switch/case - A `switch` statement allows a program to evaluate an expression an
           case 2:
             return "two";
             break;
-  
             default:
             return "Please choose 1 or 2 only";
             break;
