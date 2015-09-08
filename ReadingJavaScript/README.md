@@ -155,6 +155,11 @@
 
               ``` var letters = [a,b,c,d,e];
                   var newletters = letters.push(f) // adds f at the end of the array
+                  
+      * **change array Length** - change the array length.
 
+          _Example:_
 
-      * **Add to the End** - returns the length of an array  
+              ``` var letters = [];
+                  letter.length = 50;
+              ```

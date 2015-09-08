@@ -1,12 +1,18 @@
 /**
- * The function `reverse` computes the reversal 
+ * The function `reverse` computes the reversal
  * of a given `String` (don't copy-pasta!)
  *
  * @param {String} S to reverse
  * @return {String}
  */
 function reverse(S){
-    // YOUR CODE HERE: NO INTERNET COPY-PASTA!
+      // YOUR CODE HERE: NO INTERNET COPY-PASTA!
+    var newString = S;
+    var reversed = "";
+    for (var i = newString.length-1; i >= 0; i--){
+      reversed = reversed + newString[i];
+    }
+    return reversed;
 }
 
 console.assert(reverse("") === ""); // Really?
@@ -31,16 +37,29 @@ console.assert(
  * @see String.prototype.charCodeAt
  * @see String.prototype.fromCharCode
  * @see http://en.wikipedia.org/wiki/ROT13
- * 
+ *
  * // Start with just `phrase`...
  * @param {String} phrase to encode
  * // Add `N` in part 2!
  * // @param {Number} N rotation to apply, default 13
  * @return {String} encoded with ROT13
  */
-function encode(phrase/*, N */){
+function encode(phrase,N ){
+    var rot = N || 13;
+    var oldString = phrase;
+    var newString = "";
+    for (var i in oldString){
+      var currentNum = oldString.charCodeAt(i);
+      var newNum = currentNum + rot;
+      if (newNum > 122) {
+        newNum = newNum - 26;
+      }
+      newString = newString + String.fromCharCode(newNum);
+    }
+    return newString;
     // YOUR CODE HERE... EMPHASIS ON **YOUR**
 }
+
 
 /**
  * Function `decode` accepts a `phrase` and `N` and
@@ -56,6 +75,7 @@ function decode(phrase, N){
 }
 
 // Produce more examples, please...
+console.assert(encode("abc") === "nop");
 console.assert(encode("hello") === "uryyb");
 console.assert(encode("uryyb") === "hello");
 
