@@ -21,7 +21,7 @@ test('getting a list of multiples of 5', function(){
 test('getting a list of multiples of 3 and 5', function(){
   expect(multiple).to.exist;
   expect(multiple(10)).to.equal(23);
-  expect(multiple(20)).to.equal(93);
+  expect(multiple(20)).to.equal(78);
   expect(multiple(50)).to.equal(633);
   expect(multiple(1000)).to.equal(266333);
 }); // END test 3s and 5s
@@ -51,20 +51,10 @@ return sum;
 function multiple (num) {
   var sum = 0;
   for (var i = 3; i < num; i++){
-    if((i % 3 === 0) || (i % 5 === 0)){
+    if((i % 3 === 0) || (i % 5 === 0) ){
+      if (i % 15 !== 0){
       sum = sum + i;
     }
-  }
-return sum;
-}
-
-
-
-function multiple (num) {
-  var sum;
-  for (var i=0; i<num; i++){
-    if(i % 3 == 0 || i % 5 == 0){
-      sum = sum + i;
     }
   }
 return sum;
