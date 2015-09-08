@@ -91,5 +91,10 @@ console.assert(encode("abc") === "nop");
 console.assert(encode("hello") === "uryyb");
 console.assert(encode("uryyb") === "hello");
 
+console.assert(encode("velma") === "iryzn");
+
 console.assert(encode("hello", 2) === "jgnnq")
+console.assert(encode("hello", 8) === "pmttw")
 console.assert(decode("jgnnq", 2) === "hello")
+
+console.assert(decode("velma") === "iryzn")
