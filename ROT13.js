@@ -71,7 +71,19 @@ function encode(phrase,N ){
  * @return {String} decoded by ROT-N
  */
 function decode(phrase, N){
-    // YOUR CODE HERE
+  var rot = N || 13;
+  var oldString = phrase;
+  var newString = "";
+  for (var i in oldString){
+    var currentNum = oldString.charCodeAt(i);
+    var newNum = currentNum - rot;
+    if (newNum < 97) {
+      newNum = newNum + 26;
+    }
+    newString = newString + String.fromCharCode(newNum);
+  }
+  return newString;
+  // YOUR CODE HERE... EMPHASIS ON **YOUR**
 }
 
 // Produce more examples, please...
