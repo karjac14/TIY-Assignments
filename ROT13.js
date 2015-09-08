@@ -90,11 +90,14 @@ function decode(phrase, N){
 console.assert(encode("abc") === "nop");
 console.assert(encode("hello") === "uryyb");
 console.assert(encode("uryyb") === "hello");
-
+console.assert(encode("cat") === "png");
 console.assert(encode("velma") === "iryzn");
+console.assert(encode("it") === "vg");
 
 console.assert(encode("hello", 2) === "jgnnq")
 console.assert(encode("hello", 8) === "pmttw")
-console.assert(decode("jgnnq", 2) === "hello")
+console.assert(encode("hello", 0) === "hello")
+console.assert(encode("hello", 1) === "ifmmp")
 
+console.assert(decode("jgnnq", 2) === "hello")
 console.assert(decode("velma") === "iryzn")
