@@ -1,7 +1,12 @@
 // Put `items.json` in your `APIGymnastics` directory...
 var items = require('items.json');
 
+
 // TODO: Setup mocha and chai...
+
+var test = require('mocha').it,
+    expect = require('chai').expect,
+
 
 test('this is the easy one', function(){
   expect(Array.isArray(items)).to.be.true; // What.
