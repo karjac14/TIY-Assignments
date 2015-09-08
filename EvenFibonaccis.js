@@ -6,8 +6,26 @@ test('generating the Fibonacci sequence', function(){
   expect(fibonacci(1)).to.deep.equal([ 1 ]);
   expect(fibonacci(2)).to.deep.equal([ 1, 2 ]);
   expect(fibonacci(5)).to.deep.equal([1, 2, 3, 5 ]);
-  // ...ad nauseum.
+  expect(fibonacci(15)).to.deep.equal([1, 2, 3, 5, 8, 13]);
+  expect(fibonacci(50)).to.deep.equal([1, 2, 3, 5, 8, 13, 21, 34]);
+  expect(fibonacci(100)).to.deep.equal([1, 2, 3, 5, 8, 13, 21, 34, 55, 89]);
 }); // END test(fibonacci)
+
+function fibonacci (num){
+  var sequence = [];
+  if (num = 0) {
+    return sequence;
+  } else if (num = 1) {
+    return [1];
+  } else if ( num > 1 ){
+  var fibs = 0;
+  for ( var i = 1; i <= num; i++ ){
+    fibs = i + fibs;
+    sequence.push(fibs);
+  }
+}
+}
+
 
 // Hey, where's `fibonacci`...? Uh oh...
 
@@ -29,7 +47,7 @@ test('summing lists of Number', function(){
 
 // You expect me to write `sum`, too?
 
-test('summing even Fibonacci numbers?', function(){ 
+test('summing even Fibonacci numbers?', function(){
   expect( sum(evens(fibonacci(0))) ).to.equal(FILL_ME_IN); // nice.
   // There really should be more code in here...
 }); // END test(dat CHAIN tho)
