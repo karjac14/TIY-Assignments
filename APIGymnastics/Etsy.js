@@ -17,29 +17,38 @@ test('this is the easy one', function(){
 test('finding the average price', function(){
   var yourAnswer = "start with `items`; use `Array` methods";
 
-  expect(averagePrice(items)).to.be.closeTo(23.63, 0.01);
+  expect( average(items) ).to.be.closeTo(23.63, 0.01);
 });
 
 test('finding that perfect $15 item', function(){
+
+  expect( pricedBetween(items, 14, 18) ).to.deep.equal([ "1970s Coors Banquet Glass Beer Pitcher", "The Three Broomsticks Customizable Beer Stein Mug, Harry Potter Inspired, hogsmeade village, harry potter gift, three broomsticks mug",
+"Hand Painted Colorful Feather Glass" ]);
+});
   /**
    * @param {Array} items to search through
-   * @return {Array} of `items` with `price` between `min` and `max` USD
+   * @return {Array} of `names` with `price` between `min` and `max` USD
    */
-function averagePrice (items) {
+
+function average (list) {
     //var allprices = [];
     var total = 0;
-    for (var i in items){
-      if (items.includes("prices")){
-        total = total + items.prices;
-      }
+    for (var i in list){
+        total = total + (list[i].price);
     }
     return total/(items.length);
-  }
+}
 
-  expect( pricedBetween(items, 14, 18) ).to.deep.equal([
-    // Can you find their names _without_ code first?
-  ]);
-});
+function pricedBetween (list) {
+    var all15 = [];
+    for (var i in list){
+      if (list[i].price > 14 && list[i].price < 18)
+        all15.push(list[i].title)
+    }
+    return all15;
+}
+
+
 
 test('pond hopping', function(){
   expect( /* your answer */ ).to.deep.equal({
