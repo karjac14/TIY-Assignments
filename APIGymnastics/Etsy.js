@@ -4,9 +4,8 @@ var items = require('items.json');
 
 // TODO: Setup mocha and chai...
 
-var test = require('mocha').it,
-    expect = require('chai').expect,
-
+var test = require('mocha').it;
+    expect = require('chai').expect;
 
 test('this is the easy one', function(){
   expect(Array.isArray(items)).to.be.true; // What.
@@ -18,7 +17,7 @@ test('this is the easy one', function(){
 test('finding the average price', function(){
   var yourAnswer = "start with `items`; use `Array` methods";
 
-  expect(yourAnswer).to.be.closeTo(23.63, 0.01);
+  expect(averagePrice(items)).to.be.closeTo(23.63, 0.01);
 });
 
 test('finding that perfect $15 item', function(){
@@ -26,8 +25,15 @@ test('finding that perfect $15 item', function(){
    * @param {Array} items to search through
    * @return {Array} of `items` with `price` between `min` and `max` USD
    */
-  function pricedBetween(items, min, max){
-    // Just a suggestion, really...
+function averagePrice (items) {
+    //var allprices = [];
+    var total = 0;
+    for (var i in items){
+      if (items.includes("prices")){
+        total = total + items.prices;
+      }
+    }
+    return total/(items.length);
   }
 
   expect( pricedBetween(items, 14, 18) ).to.deep.equal([
