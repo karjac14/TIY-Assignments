@@ -221,3 +221,8 @@ Interface that represents a generic collection of elements and offers methods an
 List containing objects that are collections of nodes and are returned by Node.childNodes and the document.querySelectorAll method.
 
 
+07 
+
+Event.bubbles - Returns a Boolean value, which is true if the event bubbles up through the DOM.
+
+
