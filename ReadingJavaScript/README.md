@@ -244,25 +244,32 @@ Event target or `event.target` refers to the object that dispatched the event. I
 The `event.target` property can be used in order to implement event delegation.
 
 #### Mouse Event types
-* ** click**
-* ** dblclick**
-* ** mousedown**
-* ** mouseup**
-* ** mouseover**
-* ** mouseout**
-* ** mousemove**
+
+* ** dblclick** If two clicks happen close together, a `dblclick` (double-click) event is fired, after the second click event. 
+* ** mousedown**  is fired not only when the mouse is physically clicked down. When a mouse is clicked and held, the event is fired again every time the mousedown repeats. 
+* ** mouseup** is fired when the mouse click is released up.
+* ** mouseover** Whenever the mouse pointer enters a node 
+* ** mouseout** After the `mouseover`, `mouseout` Whenever the mouse pointer leaves a node 
+* ** mousemove** Every time the mouse pointer moves, a `mousemove` event fires. This event can be used to track the position of the mouse. 
+
 
 #### Form Event types
-* ** reset**
-* ** submit**
+The HTMLFormElement interface provides methods to create and modify `form` elements; it inherits from properties and methods of the HTMLElement interface.
+
+* ** reset** The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button.
+If a form control (such as a reset button) has a name or id of reset it will mask the form's reset method. It does not reset other attributes in the input, such as disabled.
+
+* ** submit** Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
 
 #### Other common event types
 
-* ** click**
-* ** scroll**
-* ** change**
-* ** submit**
-* ** load**
-* ** unload**
+* ** click** this an event that is fired on the most specific node that contained both the press and the release of the button. 
+* ** scroll** Whenever an element is scrolled, a "scroll" event is fired on it. This has various uses, such as knowing what the user is currently looking at or showing some indication of progress 
+* ** change** The change event is fired for `input`, `select`, and `textarea` elements when a change to the element's value is committed by the user. Unlike the input event, the change event is not necessarily fired for each change to an element's value.
+* ** submit** Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
+* ** load**  The load event is fired when a resource and its dependent resources have finished loading.
+* ** unload** The unload event is fired when the document or a child resource is being unloaded.
 
 #### Keyboard events
+
+
