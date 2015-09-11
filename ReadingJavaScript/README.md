@@ -221,8 +221,20 @@ Interface that represents a generic collection of elements and offers methods an
 List containing objects that are collections of nodes and are returned by Node.childNodes and the document.querySelectorAll method.
 
 
-07 
+07 - Assignments
 
-Event.bubbles - Returns a Boolean value, which is true if the event bubbles up through the DOM.
+#### How does an Event Bubbles?
 
+When an event is captured in a single element at the DOM, the event (such as mouse clicks) climbs up to the top of the DOM (or the window). This proces is called a event bubbling.
 
+A good example of this is when a hyperlined text is being clicked, the action goes through a capturing process coming from the `window` passing down to `document`, `html`, `body` all the way down to the element. When it reaches the the element, the event result goes up back, or called the bubbling process. During this bubbling process, each element in the heirarchy have the chance to check the event. Eventlistener commands can be set to perform actions in any of the element within the path.
+
+Event bubbling process may be stopped, at a particular element using the `stopPropagation` method.
+
+Here is a an example of event listener.
+
+	`clickButton.addEventListener( "click", afunction, false);` 
+	
+	the `false` value refers to the event as bubbling process, while a `true` refers to capturing process.
+
+#### Event Target
