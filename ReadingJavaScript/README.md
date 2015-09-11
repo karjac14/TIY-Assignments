@@ -237,4 +237,32 @@ Here is a an example of event listener.
 	
 	the `false` value refers to the event as bubbling process, while a `true` refers to capturing process.
 
-#### Event Target
+#### Event Targeting
+
+Event target or `event.target` refers to the object that dispatched the event. It is different than `event.currentTarget` when the event handler is called during the bubbling or capturing phase of the event.
+
+The `event.target` property can be used in order to implement event delegation.
+
+#### Mouse Event types
+* ** click**
+* ** dblclick**
+* ** mousedown**
+* ** mouseup**
+* ** mouseover**
+* ** mouseout**
+* ** mousemove**
+
+#### Form Event types
+* ** reset**
+* ** submit**
+
+#### Other common event types
+
+* ** click**
+* ** scroll**
+* ** change**
+* ** submit**
+* ** load**
+* ** unload**
+
+#### Keyboard events
