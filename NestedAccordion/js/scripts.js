@@ -8,43 +8,30 @@
  *   - the `<li class="cbp-ntopen">` that contains the heading I click turns into `<li>`
  */
 
-/**
-var headingClose = document.querySelectorAll('li');               //creates array of closed accordion
-var headingOpen = document.querySelectorAll('li.cbp-ntopen');     //creates array of opened accordion
-
-console.log(headingClose);
-console.log(headingOpen);
-//if (headingClose.length > 0){
-for  (var i=0; i < headingClose.length; i++){
-headingClose[i].addEventListener('click', function() {
-    headingClose[i].className ='cbp-ntopen';
-}, false)}
-//}
-
-for  (var j=0; j < headingOpen.length; j++){
-headingOpen[j].addEventListener('click', function() {
-    headingOpen[j].className = "";
-}, false)}
-*/
 
 
-var heading = document.querySelector('li.nttrigger');
-
-heading.addEventListener('click', function() {
-
-  if (document.querySelector("li").className !== "cbp-ntopen"){
-    document.querySelector("li").className = "cbp-ntopen";
-    return true;
-  }
-  if (document.querySelector("li").className === "cbp-ntopen"){
-    document.querySelector("li").className = "";
-    return true;
-  }
+function clickEvent (eventObject) {
+  var liElement = eventObject.currentTarget.parentElement;
+if (liElement.className === "cbp-ntopen") { //if the li element has class of cbp-ntopen when clicked, remove that class (closing the accordion)
+  liElement.className = "";
+} else { //otherwise give the li element the class of cbp-ntopen when clicked (opening the accordion)
+  liElement.className = "cbp-ntopen";
 }
-)
+//return true;
+}
 
+var headings3 = document.querySelectorAll("h3.cbp-nttrigger"); //returns an array of all h3 headings class of cbp-nttrigger. These are assigned to var headings
+for (var i = 0; i < headings3.length; i++) { //this for loop passes through each item in the array
+  var heading = headings3[i];
+  heading.addEventListener('click', clickEvent); //each item passing through the loop is given the event listener click and the function clickAction
+}
 
-
+//these lines of code do the exact same thing but for all h4 elements with a class of cbp-nttrigger
+var headings4 = document.querySelectorAll("h4.cbp-nttrigger");
+for (var i = 0; i < headings4.length; i++) {
+  var heading = headings4[i];
+  heading.addEventListener('click', clickEvent);
+}
 
 
 

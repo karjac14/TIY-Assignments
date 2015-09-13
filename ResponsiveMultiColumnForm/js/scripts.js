@@ -14,29 +14,27 @@
 // check other websites, see how inputs might be turned in or pron to console.
 //
 
-var formsubmit = document.querySelector(".cbp-mc-submit");
+var formsubmit = document.querySelector(".cbp-mc-submit"); //define submit element
 console.log(formsubmit);
 formsubmit.addEventListener("click", function(event) {
-    //console.log(document.querySelector('input#first_name'));
+
     console.log(formelements.elements[0].value);
     console.log(formelements.elements[1].value);
-    console.log(formelements.elements[2].type);
-    console.log(formelements.elements[3].type);
-    console.log(formelements.elements[4].type);
-    console.log(formelements.elements[5].type);
-    console.log(formelements.elements[6].type);
-    console.log(formelements.elements[7].type);
-    console.log(formelements.elements[8].type);
-    console.log(formelements.elements[9].type);
-    console.log(formelements.elements[10].type);
-    console.log(formelements.elements[11].type);
-    console.log(formelements.elements[12].type);
-    console.log(formelements.elements[13].type);
-    console.log(formelements.elements[14].type);
-    console.log(formelements.elements[15].type);
-
-  event.preventDefault();
+    console.log(formelements.elements[2].value);
+    console.log(formelements.elements[3].value);
+    console.log(formelements.elements[4].value);
+    console.log(formelements.elements[5].value);
+    console.log(formelements.elements[6].value);
+    console.log(formelements.elements[7].value);
+    console.log(formelements.elements[8].value);
+    console.log(formelements.elements[9].value);
+    console.log(formelements.elements[10].value);
+    console.log(formelements.elements[11].value);
+    console.log(formelements.elements[12].value);
+    console.log(formelements.elements[13].value);
+    console.log(formelements.elements[14].value);
+    event.preventDefault();
   });
 
-  var formelements = document.querySelector("form");
+  var formelements = document.querySelector("form");  //define all elements inside form
   console.log(formelements);
