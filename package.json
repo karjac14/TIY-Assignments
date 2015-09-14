@@ -1,0 +1,28 @@
+{
+  "name": "tiy-assignement",
+  "version": "0.0.0",
+  "description": "none",
+  "main": "ROT13.js",
+  "dependencies": {
+    "chai": "^3.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karjac14/TIY-Assignments.git"
+  },
+  "keywords": [
+    "rot13"
+  ],
+  "author": "karlo <karloe@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karjac14/TIY-Assignments/issues"
+  },
+  "homepage": "https://github.com/karjac14/TIY-Assignments#readme"
+}
