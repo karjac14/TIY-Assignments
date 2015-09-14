@@ -221,3 +221,55 @@ Interface that represents a generic collection of elements and offers methods an
 List containing objects that are collections of nodes and are returned by Node.childNodes and the document.querySelectorAll method.
 
 
+07 - Assignments
+
+#### How does an Event Bubbles?
+
+When an event is captured in a single element at the DOM, the event (such as mouse clicks) climbs up to the top of the DOM (or the window). This proces is called a event bubbling.
+
+A good example of this is when a hyperlined text is being clicked, the action goes through a capturing process coming from the `window` passing down to `document`, `html`, `body` all the way down to the element. When it reaches the the element, the event result goes up back, or called the bubbling process. During this bubbling process, each element in the heirarchy have the chance to check the event. Eventlistener commands can be set to perform actions in any of the element within the path.
+
+Event bubbling process may be stopped, at a particular element using the `stopPropagation` method.
+
+Here is a an example of event listener.
+
+	`clickButton.addEventListener( "click", afunction, false);` 
+	
+	the `false` value refers to the event as bubbling process, while a `true` refers to capturing process.
+
+#### Event Targeting
+
+Event target or `event.target` refers to the object that dispatched the event. It is different than `event.currentTarget` when the event handler is called during the bubbling or capturing phase of the event.
+
+The `event.target` property can be used in order to implement event delegation.
+
+#### Mouse Event types
+
+* ** dblclick** If two clicks happen close together, a `dblclick` (double-click) event is fired, after the second click event. 
+* ** mousedown**  is fired not only when the mouse is physically clicked down. When a mouse is clicked and held, the event is fired again every time the mousedown repeats. 
+* ** mouseup** is fired when the mouse click is released up.
+* ** mouseover** Whenever the mouse pointer enters a node 
+* ** mouseout** After the `mouseover`, `mouseout` Whenever the mouse pointer leaves a node 
+* ** mousemove** Every time the mouse pointer moves, a `mousemove` event fires. This event can be used to track the position of the mouse. 
+
+
+#### Form Event types
+The HTMLFormElement interface provides methods to create and modify `form` elements; it inherits from properties and methods of the HTMLElement interface.
+
+* ** reset** The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button.
+If a form control (such as a reset button) has a name or id of reset it will mask the form's reset method. It does not reset other attributes in the input, such as disabled.
+
+* ** submit** Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
+
+#### Other common event types
+
+* ** click** this an event that is fired on the most specific node that contained both the press and the release of the button. 
+* ** scroll** Whenever an element is scrolled, a "scroll" event is fired on it. This has various uses, such as knowing what the user is currently looking at or showing some indication of progress 
+* ** change** The change event is fired for `input`, `select`, and `textarea` elements when a change to the element's value is committed by the user. Unlike the input event, the change event is not necessarily fired for each change to an element's value.
+* ** submit** Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
+* ** load**  The load event is fired when a resource and its dependent resources have finished loading.
+* ** unload** The unload event is fired when the document or a child resource is being unloaded.
+
+#### Keyboard events
+
+

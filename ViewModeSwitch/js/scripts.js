@@ -1,12 +1,67 @@
-The webpage shows a template for an online selling website. The website is
-responsive. The website also have minimalist blue design.
 
-There is a button or "switch" that changes the outline how the items are show.
-The two modes are grid and list. The grid shows the large photos of the items
-while the list shows smaller photos but the user can see more items at the
-same time.
+// Clicking grid icon
+//    grandparent div id = "cbp-vm" will have class "cbp-vm-switcher cbp-vm-view-grid"
+//    1st atag(grid) will have class "cbp-vm-icon" "cbp-wm-grid" "cbp-vw-selected" and data-view "cbp-vw-view-grid"
+//    2nd atag will have class "cbp-vm-icon" "cbp-wm-list" and data view "cbp-vw-view-list"
+// Clicking Grid icon
+//    grandparent div id = "cbp-vm" will have class "cbp-vm-switcher cbp-vm-view-list"
+//    1st atag(grid) will have class "cbp-vm-icon" "cbp-wm-grid" "cbp-vw-selected" and data-view "cbp-vw-view-grid"
+//    2nd atag will have class "cbp-vm-icon" "cbp-wm-list" "cbp-vw-selected" and data view "cbp-vw-view-list
 
-The javscrpt is ecpected to invloved in the behaviour of the switches. It can
-take an input of click from the modes of the view. The output will give a
-different container size (where the items are show). Another JS files also
-the classes of the html object to change the behaviours.
+
+var divVm = document.querySelector("div#cbp-vm");
+var aGrid = document.querySelector('a.cbp-vm-icon.cbp-vm-grid');
+var aList = document.querySelector('a.cbp-vm-icon.cbp-vm-list');
+// assign elements "parent div", and the two a-tags.
+
+console.log (divVm);
+console.log (aGrid);
+console.log (aList);
+// prints in console, just to check if getting correct elements.
+
+
+function clickGrid (clickButton) {
+  var curButton = clickButton.currentTarget; // targets the current element which is grid
+  divVm.className = "cbp-vm-switcher cbp-vm-view-grid"; //assigns classes to parent div
+  curButton.className = "cbp-vm-icon cbp-vm-grid cbp-vm-selected";
+  aList.className = "cbp-vm-icon cbp-vm-list"; //assigns classes to list a tag
+}
+
+function clickList (clickButton) {
+  var curButton = clickButton.currentTarget; // targets the current element which is list
+  divVm.className = "cbp-vm-switcher cbp-vm-view-list"; //assigns classes to parent div
+  curButton.className = "cbp-vm-icon cbp-vm-list cbp-vm-selected";
+  aGrid.className = "cbp-vm-icon cbp-vm-grid"; //assigns classes to grid a tag
+}
+
+aGrid.addEventListener('click', clickGrid, true); //listens clicks at grid icon
+aList.addEventListener('click', clickList, true); //listens clicks at list icon
+
+
+
+
+// var list = document.getElementsByClassName('cbp-vm-list');
+//
+// list.addEventListener ('click', changetolist (), true);
+//
+// function changetolist () {
+//
+//
+// }
+//
+//
+//
+//
+// function toggleClass(list, "cbp-vm-selected"){
+//    if (!list || !"cbp-vm-selected"){
+//        return;
+//    }
+//
+//    var classString = element.className, nameIndex = classString.indexOf(className);
+//    if (nameIndex == -1) {
+//        classString += ' ' + className;
+//    }
+//    else {
+//        classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+//    }
+//    element.className = classString;
