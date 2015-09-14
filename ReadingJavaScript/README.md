@@ -163,3 +163,113 @@
               ``` var letters = [];
                   letter.length = 50;
               ```
+
+
+
+## Document Object Model (DOM)
+
+A programming interface for HTML, XML, and SVG documents, connecting webpages to scripts. It represents the document as a structured group of nodes and objects (in tree form) making it accessible and changeable. The nodes can have events attached to them.
+
+####Window Object
+An object representing a window containing a DOM document.
+
+Properties:
+* **document:** This property returns the DOM document which is loaded in the window.
+* **location:** Gets/sets the location(URL) or the window object. _Though Window.location is a read-only Location object, you can also assign a DOMString to it._
+* **history:** is a read-only property that returns a reference to the History object, which provides an interface for manipulating the browser session history (pages visited in the tab or frame that the current page is loaded in).
+
+Methods:
+* **Window.alert():** Displays an alert dialog.
+* **Window.confirm():** Displays a dialog box with a message the user needs to respond to.
+* **Window.reload():** Reloads the window.
+* **Window.open():** Opens a new window.
+* **Window.close():** Closes the current window.
+
+#### Location Object
+The Location interface represents the location of the object it is linked to. Changes done on it are reflected on the object it relates to. Both the Document and Window interface have such a linked Location, accessible via Document.location and Window.location respectively.
+
+#### Document Object
+The object created in the browser when a web page loads. Entry point into the web page’s content. Depending on the kind of the document (e.g. HTML or XML), different APIs may be available on the document object.
+Properties:
+* **head:** Returns the element of the current document.
+*docment.body: Returns the element of the current document.
+methods:
+* **document.getElementById():** Returns an object reference to the identified element.
+* **document.getElementsByClassName:** Returns a list of elements with the given class name
+* **document.querySelector:** Returns the first Element node within the document, in document order, that matches the specified selectors.
+* **document.querySelectorAll:** Returns a list of all the Element nodes within the document that match the specified selectors.
+* **create:** Creates whatever is specified i.e. document
+* **document.write:** Writes text in a document
+
+#### HTMLElement
+The main component of HTML documents.
+Properties:
+* **id:** The id global attribute defines a unique identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
+* **className:** Classes allows CSS and Javascript to select and access specific elements via the class selectors or functions like the DOM method document.getElementsByClassName.
+* **innerHTML:** property sets or gets the HTML syntax describing the element's descendants.
+* **outerHTML:** The outerHTML attribute of the element DOM interface gets the serialized HTML fragment describing the element including its descendants. It can be set to replace the element with nodes parsed from the given string.
+* **parent, children, nextSibling, and firstChild:** Inheritance. Parent is the root, child inherits from the parent, nextSibling also inherits from the parent but is separate from its sibling, firstChild is the first child called.
+methods:
+* **EventTarget.addEventListener():** A method that registers the specified listener on the EventTarget it's called on. The event target may be an Element in a document, the Document itself, a Window, or any other object that supports events (such as XMLHttpRequest).
+* **EventTarget.dispatchEvent():** Dispatches an Event at the specified EventTarget, invoking the affected EventListeners in the appropriate order. The normal event processing rules (including the capturing and optional bubbling phase) apply to events dispatched manually with dispatchEvent().
+* **Attribute:** An attribute extends a tag, changing tag behavior or providing metadata. An attribute always has the form name=value (giving the attribute's identifier and the attribute's associated value).
+
+#### HTMLCollection
+Interface that represents a generic collection of elements and offers methods and properties when selecting from the list. They are like arrays in that they are a list containing data, however, the each item contains multiple pieces of data.
+
+#### NodeList
+List containing objects that are collections of nodes and are returned by Node.childNodes and the document.querySelectorAll method.
+
+
+07 - Assignments
+
+#### How does an Event Bubbles?
+
+When an event is captured in a single element at the DOM, the event (such as mouse clicks) climbs up to the top of the DOM (or the window). This proces is called a event bubbling.
+
+A good example of this is when a hyperlined text is being clicked, the action goes through a capturing process coming from the `window` passing down to `document`, `html`, `body` all the way down to the element. When it reaches the the element, the event result goes up back, or called the bubbling process. During this bubbling process, each element in the heirarchy have the chance to check the event. Eventlistener commands can be set to perform actions in any of the element within the path.
+
+Event bubbling process may be stopped, at a particular element using the `stopPropagation` method.
+
+Here is a an example of event listener.
+
+	`clickButton.addEventListener( "click", afunction, false);` 
+	
+	the `false` value refers to the event as bubbling process, while a `true` refers to capturing process.
+
+#### Event Targeting
+
+Event target or `event.target` refers to the object that dispatched the event. It is different than `event.currentTarget` when the event handler is called during the bubbling or capturing phase of the event.
+
+The `event.target` property can be used in order to implement event delegation.
+
+#### Mouse Event types
+
+* ** dblclick** If two clicks happen close together, a `dblclick` (double-click) event is fired, after the second click event. 
+* ** mousedown**  is fired not only when the mouse is physically clicked down. When a mouse is clicked and held, the event is fired again every time the mousedown repeats. 
+* ** mouseup** is fired when the mouse click is released up.
+* ** mouseover** Whenever the mouse pointer enters a node 
+* ** mouseout** After the `mouseover`, `mouseout` Whenever the mouse pointer leaves a node 
+* ** mousemove** Every time the mouse pointer moves, a `mousemove` event fires. This event can be used to track the position of the mouse. 
+
+
+#### Form Event types
+The HTMLFormElement interface provides methods to create and modify `form` elements; it inherits from properties and methods of the HTMLElement interface.
+
+* ** reset** The HTMLFormElement.reset() method restores a form element's default values. This method does the same thing as clicking the form's reset button.
+If a form control (such as a reset button) has a name or id of reset it will mask the form's reset method. It does not reset other attributes in the input, such as disabled.
+
+* ** submit** Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
+
+#### Other common event types
+
+* ** click** this an event that is fired on the most specific node that contained both the press and the release of the button. 
+* ** scroll** Whenever an element is scrolled, a "scroll" event is fired on it. This has various uses, such as knowing what the user is currently looking at or showing some indication of progress 
+* ** change** The change event is fired for `input`, `select`, and `textarea` elements when a change to the element's value is committed by the user. Unlike the input event, the change event is not necessarily fired for each change to an element's value.
+* ** submit** Bind an event handler to the "submit" JavaScript event, or trigger that event on an element.
+* ** load**  The load event is fired when a resource and its dependent resources have finished loading.
+* ** unload** The unload event is fired when the document or a child resource is being unloaded.
+
+#### Keyboard events
+
+
