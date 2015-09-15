@@ -270,6 +270,55 @@ If a form control (such as a reset button) has a name or id of reset it will mas
 * ** load**  The load event is fired when a resource and its dependent resources have finished loading.
 * ** unload** The unload event is fired when the document or a child resource is being unloaded.
 
-#### Keyboard events
+# Reading CSS
+
+## Selectors
+
+`.class` -Selects all elements with class
+
+`#id` -Selects the element with id
+
+`*` -Selects all
+
+element - select all element with the element name, such as <p>, <div> , <li>
+
+element, element - select two kinds of element, such as <p> and <div>
+
+
+
+## Properties
+
+`display` is CSS's most important property for controlling layout. Every element has a default display value depending on what type of element it is. The default for most elements is usually block or inline. 
+
+`position` property specifies the type of positioning method used for an element (static, relative, fixed or absolute)
+
+`float` property specifies whether or not an element should float.
+
+`clear` property is used to control the behavior of floating elements.
+
+`span` is the standard inline element. An inline element can wrap some text inside a paragraph without disrupting the flow of that paragrap
+
+`width` is used for setting a block-level element will prevent it from stretching out to the edges of its container to the left and right.
+
+`max-width` property is used to set the maximum width of a given element. It prevents the used value of the width property from becoming larger than the value specified for max-width.
+
+`box-sizing` property is used to alter the default CSS box model used to calculate widths and heights of elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
+
+<percentage> CSS data types represent a percentage value. Many CSS properties can take percentage values, often to define sizes in terms of parent objects. Percentages are formed by a <number> immediately followed by the percentage sign %
+
+`vertical-align` CSS property specifies the vertical alignment of an inline or table-cell box.
+
+
+### [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) 
+
+The text color of an element and its decorations (??)
+
+#### Possible Values: [any `<color>` value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+
+* a hexadecimal color value: `#012345`, `#CCC`
+* a color keyword: `cornflowerblue`, `purple`, `orange`
+* RGB decimal notation: `rgb(0,0,0)`, `rgb(255, 255, 255)`
+* RGBa (transparency) notation: `rgba(0,0,0,0)`, `rgba(255, 255, 255, 0.8)`
+* HSL decimal notation: `hsl(0, 100%, 50%)`
 
 
