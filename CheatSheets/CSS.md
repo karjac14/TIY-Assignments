@@ -308,17 +308,47 @@ element, element - select two kinds of element, such as <p> and <div>
 
 `vertical-align` CSS property specifies the vertical alignment of an inline or table-cell box.
 
+### [`border`](https://developer.mozilla.org/en-US/docs/Web/CSS/border) 
 
-### [`color`](https://developer.mozilla.org/en-US/docs/Web/CSS/color) 
+The border CSS property is a shorthand property for setting the individual border property values in a single place in the style sheet. border can be used to set the values for one or more of: border-width, border-style, border-color.
 
-The text color of an element and its decorations (??)
+#### Possible Values:
 
-#### Possible Values: [any `<color>` value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
+* border-top-width: medium
+* border-right-width: medium
+* border-bottom-width: medium
+* border-left-width: medium
 
-* a hexadecimal color value: `#012345`, `#CCC`
-* a color keyword: `cornflowerblue`, `purple`, `orange`
-* RGB decimal notation: `rgb(0,0,0)`, `rgb(255, 255, 255)`
-* RGBa (transparency) notation: `rgba(0,0,0,0)`, `rgba(255, 255, 255, 0.8)`
-* HSL decimal notation: `hsl(0, 100%, 50%)`
+### [`max`]() 
+
+usually a prefix setting the value of a property to maximum
+
+#### Possible Values:
+
+* max-width
+* max-height
+* max-inline
+
+### [`min`]() 
+
+usually a prefix setting the value of a property to minimum
+
+#### Possible Values:
+
+* min-width
+* min-height
+* min-inline
+
+### [`box-sizing`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing) 
+
+The box-sizing property is used to alter the default CSS box model used to calculate widths and heights of elements. It is possible to use this property to emulate the behavior of browsers that do not correctly support the CSS box model specification.
+
+#### Possible Values:
+
+* border-top-width: medium
+* border-right-width: medium
+* border-bottom-width: medium
+* border-left-width: medium
+
 
 

@@ -8,7 +8,7 @@
 // User Stories
 // I can add a task to my todo list so that I can remember to do it later.
 //  - TODO: Accepts strings from element input.new-todo,
-//          addEventListener with event "change" to store string.
+//          addEventListener with event "change" and "enter key "to store string.
 // I can edit a task on my todo list so that I can correct typos.
 //  - TODO: On the listed tasks, addEventListener with event dblclick.
 //          Current String should be able to be edited.
