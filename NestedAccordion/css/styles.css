@@ -74,7 +74,9 @@ a:hover {
     content: "\35";  /* must be some arrow symbol for icomoon */
 }
 
-
+.cbp-ntaccordion, .cbp-ntsubaccordion {
+  list-style: none; /* removes bullet for both list */
+}
 
 h3.cbp-nttrigger  {
   font-family: 'Lato', Calibri, Arial, sans-serif;
