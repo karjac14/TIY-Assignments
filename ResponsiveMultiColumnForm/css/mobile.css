@@ -1,0 +1,23 @@
+
+
+.container {
+ width: 390px
+}
+
+.cbp-mc-column {
+  width: 370px
+}
+
+h1 {
+  font-size: medium;
+}
+
+input {
+  width : 350px
+}
+
+label {
+  width : 350px
+}
+
+/*i guess the input and text area size may still be the same*/

@@ -1,0 +1,10 @@
+
+/* importing the Lato font from google apis/server */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
+}

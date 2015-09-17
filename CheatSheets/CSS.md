@@ -351,4 +351,34 @@ The box-sizing property is used to alter the default CSS box model used to calcu
 * border-left-width: medium
 
 
+### [`font`](https://developer.mozilla.org/en-US/docs/Web/CSS/font) 
 
+The font CSS property is either a shorthand property for setting `font-style`, `font-variant`, `font-weight`, `font-size`, `line-height` and `font-family`, or a way to set the element's font to a system font, using specific keywords.
+As with any shorthand CSS properties, the values which are not set in it are set to their individual initial values, eventually overriding values previously set using non-shorthand properties.
+
+
+#### Possible Values:
+
+* font-style: normal
+* font-family: helvetica, sans-serif;
+* font-weight: normal
+
+### [`text`](http://www.w3schools.com/css/css_text.asp) 
+
+This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified.
+
+
+#### Possible Values:
+
+* text-align: center;
+* text-transform: uppercase;
+
+### [`line`]() 
+
+Refers to the line of paragraphs.
+
+
+#### Possible Values:
+
+* line-height: 90%;
+* line-height: 200%;

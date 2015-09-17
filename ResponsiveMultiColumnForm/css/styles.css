@@ -1,0 +1,71 @@
+
+/* importing the Lato font from google apis/server */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+
+/*setting default values for all elements*/
+
+* {
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  background-color: #47a3da;
+  color: #fff;
+  border: 3px;
+  /*box-sizing: border-box;*/
+}
+
+.container {
+  width: auto;
+  height: auto;
+}
+
+input {
+  border: 2px solid #47a3da;
+  display:inline-block;
+}
+
+.cbp-mc-form .cbp-mc-column {
+  margin-right: 8%;
+  align-items: top;
+
+}
+
+.cbp-mc-column {
+  /*position: absolute;*/
+  width: 200px;
+  float: left;
+  margin: 10px;
+}
+
+
+.cbp-mc-form .cbp-mc-column input, .cbp-mc-form .cbp-mc-column textarea, .cbp-mc-form .cbp-mc-column select {
+
+  margin: 4%;
+  padding: 5px 1%;
+  color: #FFF;
+  width: auto;
+  align: left;
+  border: 2px solid white;
+  display: block;
+}
+
+.cbp-mc-column label, .cbp-mc-column input, .cbp-mc-column textarea{
+
+  margin: 4%;
+  width: auto;
+  align: left;
+  display: block;
+
+}
+
+input.cbp-mc-submit {
+
+  text-align: center;
+  border: none;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-size: 11px;
+  max-width: 30%;
+  text-transform: uppercase;
+  padding: 20px 15px;
+
+}
