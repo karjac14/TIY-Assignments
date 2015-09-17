@@ -360,6 +360,25 @@ As with any shorthand CSS properties, the values which are not set in it are set
 #### Possible Values:
 
 * font-style: normal
-* font-variant: normal
+* font-family: helvetica, sans-serif;
 * font-weight: normal
 
+### [`text`](http://www.w3schools.com/css/css_text.asp) 
+
+This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform, and color properties. The paragraph is indented, aligned, and the space between characters is specified.
+
+
+#### Possible Values:
+
+* text-align: center;
+* text-transform: uppercase;
+
+### [`line`]() 
+
+Refers to the line of paragraphs.
+
+
+#### Possible Values:
+
+* line-height: 90%;
+* line-height: 200%;

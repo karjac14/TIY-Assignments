@@ -1,5 +1,5 @@
 
-/*link fonts icomoon*/
+/*link fonts icomoon in local folder*/
 
 @font-face {
 	font-family: 'icomoon';
@@ -12,6 +12,13 @@
 	font-style: normal;
 } /* Iconfont by Icomoon http://icomoon.io/
 
+
+/* importing the Lato font from google apis/server */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+
+
+
 body {
   margin-left: 5%;
   margin-top: 10px;
@@ -19,7 +26,7 @@ body {
 
 
 
-/* header */
+/* header part*/
 
 span {
   font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -53,10 +60,10 @@ a:hover {
 
 .cbp-ntaccordion > li > .cbp-nttrigger:before {
     margin-right: 8px;
-    color: gray;
+    color: #ddd;
     font-family: "icomoon";
     font-size: 30pt;
-    content: "\36";
+    content: "\36"; /* must be some arrow symbol for icomoon */
 }
 
 .cbp-ntaccordion > li > .cbp-nttrigger:hover:before {
@@ -64,7 +71,7 @@ a:hover {
     color: #47a3da;
     font-family: "icomoon";
     font-size: 30pt;
-    content: "\35";
+    content: "\35";  /* must be some arrow symbol for icomoon */
 }
 
 
@@ -85,7 +92,7 @@ h4 {
 
 .cbp-ntsubaccordion > li > .cbp-nttrigger:before {
     font-family: "icomoon";
-    content: "\31";
+    content: "\33";
 }
 
 .cbp-ntsubaccordion > li > .cbp-nttrigger:hover:before {
@@ -102,5 +109,31 @@ h5 {
 
 div > p {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  color: gray;
+  color: #888;
+}
+
+/*maybe it will make the screen responsive*/
+.container {
+    width:auto;
+
+}
+/* only the div has this combination of classes, inherited and assisgned*/
+.cbp-ntaccordion .cbp-ntcontent {
+  height: 0;
+  overflow: hidden;
+}
+/* when JS assigns class to the li, the div is having 3 classes*/
+.cbp-ntaccordion .cbp-ntopen .cbp-ntcontent  {
+  height: auto;
+}
+/*targeting that particular nested div, wonder if this path of classes can be shortened
+tried shortcut but just won work*/
+.cbp-ntaccordion .cbp-ntcontent .cbp-ntsubaccordion .cbp-ntcontent {
+  height: 0;
+  overflow: hidden;
+}
+/*targeting that particular nested div, wonder if this path of classes can be shortened
+tried shortcut but just won work*/
+.cbp-ntaccordion .cbp-ntopen .cbp-ntcontent .cbp-ntsubaccordion .cbp-ntopen .cbp-ntcontent {
+  height: auto;
 }
