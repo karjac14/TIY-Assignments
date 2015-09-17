@@ -53,6 +53,7 @@ a:hover {
 
 .cbp-ntaccordion > li > .cbp-nttrigger:before {
     margin-right: 8px;
+    color: gray;
     font-family: "icomoon";
     font-size: 30pt;
     content: "\36";
@@ -60,6 +61,7 @@ a:hover {
 
 .cbp-ntaccordion > li > .cbp-nttrigger:hover:before {
     margin-right: 8px;
+    color: #47a3da;
     font-family: "icomoon";
     font-size: 30pt;
     content: "\35";
@@ -83,10 +85,10 @@ h4 {
 
 .cbp-ntsubaccordion > li > .cbp-nttrigger:before {
     font-family: "icomoon";
-    content: "\32";
+    content: "\31";
 }
 
-.cbp-ntsubaccordion > li > .cbp-nttrigger:active:before {
+.cbp-ntsubaccordion > li > .cbp-nttrigger:hover:before {
     font-family: "icomoon";
     content: "\31";
 }
