@@ -1,0 +1,126 @@
+/*grid.html practice
+.col-66 {
+  width: 66.66%;
+  background-color: orange;
+  font-size: 2em
+}
+
+.col-33 {
+  width: 33.33%;
+  background-color: yellow;
+  font-size: 0.66em;
+}
+
+li:last-of-type {
+  float: left;
+  padding-right: 0px;
+
+}
+
+*/
+
+*, *::before, *::after {
+  box-sizing: border-box; /* a genuis way not get confused with box models */
+}
+
+.grid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+body {
+  width: auto;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  color: #47a3da;
+}
+
+.container {
+  width: auto;
+}
+
+header {
+  width: 85%;
+  margin: 4% 7.55%;
+}
+
+.main {
+  width: 85%;
+  margin: 20px 7.5%;
+  border: 3px solid #47a3da;
+}
+
+#cbp-vm {
+  width: auto;
+  /*margin-left: 5%;
+  margin-right: 5%;*/
+}
+
+.cbp-vm-options {
+  text-align: right;
+  padding-bottom: 20px;
+  width: 90%;
+  margin: 20px 5%;
+  border-bottom: 4px solid #47a3da;
+}
+
+ul{
+  width: 90%;
+  margin: 20px 5%;
+  padding: 0;
+}
+
+
+/* Default View - Grid */
+
+
+li {
+  width: 33%;
+  display: inline-block;
+  padding-right: 20px;
+  margin: 10px 0px;
+  list-style: none;
+  text-align: center;
+  /*font-weight: 300;
+  line-height: 1.4;*/
+}
+
+li a {
+  display: block;
+  text-align: center;
+  margin-top: 5%;
+}
+
+li h3 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+li .cbp-vm-price {
+  display: block;
+  font-size: 1.5em;
+  color: #c0c0c0
+  text-align: center;
+}
+
+li .cbp-vm-details {
+  display: block;
+  max-width: 300px;
+  min-height: 70px;
+  margin: auto;
+  text-align: center;
+}
+
+li .cbp-vm-add {
+  color: #fff;
+  background: #47a3da;
+  padding: 10px 20px;
+  border-radius: 2px;
+  margin: 10px 0;
+  display: inline-block;
+  transition: background 0.2s;
+}
