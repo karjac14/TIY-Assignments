@@ -1,0 +1,12 @@
+@media (min-width: 319px) and (max-width: 598px) {
+
+.cbp-vm-view-grid li {
+  width: 98%;
+  padding: 0px;
+}
+.main {
+  border-bottom: 1px solid #47a3da;
+}
+
+
+}
