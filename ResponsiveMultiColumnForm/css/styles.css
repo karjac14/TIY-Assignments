@@ -34,20 +34,20 @@ body {
 
 header {
   text-align: left;
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   color: #FFF;
   width: 90%;
   margin: auto;
 }
 
 header span {
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   margin-top: 10px;
   display: block;
 }
 
 header a, header h1 {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   display: inline-block;
 
 }
@@ -81,7 +81,7 @@ header a::hover, {
   display: block;
   position: relative;
   top: 30px;
-  border: 3px solid yellow;
+  /*border: 3px solid yellow;*/
   text-align: center;
   width: auto;
   margin-top: 3em;
@@ -90,10 +90,10 @@ header a::hover, {
 
 .cbp-mc-column {
 
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   display: inline-block;
   vertical-align: middle;
-  width: 31%;
+  /*width: 31%;*/
   margin: 0;
 }
 
@@ -137,7 +137,7 @@ select {
 }
 
 label {
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   font-size: 1.1em;
   text-transform: uppercase;
   text-align: left;
@@ -152,7 +152,7 @@ label {
 
 .cbp-mc-submit-wrap {
   clear: none;
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
   display: block;
   margin-left: auto;
   margin-right: auto;
