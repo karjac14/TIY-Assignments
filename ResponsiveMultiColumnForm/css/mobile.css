@@ -1,23 +1,19 @@
 
 
-.container {
- width: 390px
-}
+@media (min-width: 319px) and (max-width: 598px){
 
-.cbp-mc-column {
-  width: 370px
-}
+  .cbp-mc-form {
+  text-align: center;
 
-h1 {
-  font-size: medium;
-}
+  }
 
-input {
-  width : 350px
-}
 
-label {
-  width : 350px
-}
 
-/*i guess the input and text area size may still be the same*/
+  .cbp-mc-column {
+   display: block;
+   margin-left: 5%;
+   margin-right: 5%;
+   width: 90%;
+ }
+
+}

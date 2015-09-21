@@ -1,71 +1,188 @@
-
 /* importing the Lato font from google apis/server */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
 
+@font-face {
+	font-family: 'bpicons';
+	src:url('../fonts/bpicons/bpicons.eot');
+	src:url('../fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype');
+	src:url('../fonts/bpicons/bpicons.woff') format('woff');
+	src:url('../fonts/bpicons/bpicons.ttf') format('truetype');
+	src:url('../fonts/bpicons/bpicons.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
-/*setting default values for all elements*/
+
+
 
 * {
   font-family: 'Lato', Calibri, Arial, sans-serif;
-  background-color: #47a3da;
-  color: #fff;
-  border: 3px;
-  /*box-sizing: border-box;*/
+
 }
 
-.container {
+
+
+body {
+    background-color: #47a3da;
+}
+
+.container{
+  text-align: center;
+}
+
+/*header*/
+
+header {
+  text-align: left;
+  /*border: 1px solid orange;*/
+  color: #FFF;
+  width: 90%;
+  margin: auto;
+}
+
+header span {
+  /*border: 1px solid green;*/
+  margin-top: 10px;
+  display: block;
+}
+
+header a, header h1 {
+  /*border: 1px solid red;*/
+  display: inline-block;
+
+}
+
+.bp-icon-prev::before {
+  font-family: bpicons;
+  content: "\e004";
+}
+
+.bp-icon-prev::after {
+  content: "\e004";
+}
+
+
+
+header a::hover, {
+  content:
+
+}
+
+
+
+
+
+
+
+/*body*/
+
+.cbp-mc-form {
+
+  display: block;
+  position: relative;
+  top: 30px;
+  /*border: 3px solid yellow;*/
+  text-align: center;
   width: auto;
-  height: auto;
+  margin-top: 3em;
+}
+
+
+.cbp-mc-column {
+
+  /*border: 1px solid orange;*/
+  display: inline-block;
+  vertical-align: middle;
+  /*width: 31%;*/
+  margin: 0;
 }
 
 input {
-  border: 2px solid #47a3da;
-  display:inline-block;
-}
-
-.cbp-mc-form .cbp-mc-column {
-  margin-right: 8%;
-  align-items: top;
-
-}
-
-.cbp-mc-column {
-  /*position: absolute;*/
-  width: 200px;
-  float: left;
-  margin: 10px;
-}
-
-
-.cbp-mc-form .cbp-mc-column input, .cbp-mc-form .cbp-mc-column textarea, .cbp-mc-form .cbp-mc-column select {
-
-  margin: 4%;
-  padding: 5px 1%;
   color: #FFF;
-  width: auto;
-  align: left;
-  border: 2px solid white;
+  font-size: 1.4em;
+  border: 3px solid #FFF;
+  padding: 2%;
   display: block;
+  margin:auto;
+  width: 85%;
+  background-color: #47a3da;
 }
 
-.cbp-mc-column label, .cbp-mc-column input, .cbp-mc-column textarea{
-
-  margin: 4%;
-  width: auto;
-  align: left;
-  display: block;
-
+input:-moz-placeholder {  /* trying to change placeholder color*/
+  color: #176998;
 }
 
-input.cbp-mc-submit {
+textarea {
+  color: #FFF;
+  font-size: 1.4em;
+  border: 3px solid #FFF;
+  padding: 2%;
+  display: block;
+  margin:auto;
+  width: 85%;
+  min-height: 200px;
+  background-color: #47a3da;
+}
 
-  text-align: center;
-  border: none;
-  color: #ffffff;
-  box-sizing: border-box;
-  font-size: 11px;
-  max-width: 30%;
+select {
+  color: #FFF;
+  font-size: 1.4em;
+  /*line-height: 3px;*/
+  border: 3px solid #BBBBBB;
+  padding: 2%;
+  display: block;
+  margin:auto;
+  width: 85%;
+  background-color: #47a3da;
+}
+
+label {
+  /*border: 1px solid orange;*/
+  font-size: 1.1em;
   text-transform: uppercase;
-  padding: 20px 15px;
+  text-align: left;
+  display:block;
+  color: #FFF;
+  padding: 20px 0 10px;
+  width: 89%;
+  margin: auto;
+  background-color: #47a3da;
+}
 
+
+.cbp-mc-submit-wrap {
+  clear: none;
+  /*border: 1px solid orange;*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 25px;
+}
+
+.cbp-mc-submit:hover {
+  background-color: #1D79AF;
+}
+
+.cbp-mc-submit {
+  background-color: #176998;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  border: none;
+  width: auto;
+}
+
+
+li:nth-child(odd) .cbp_tmlabel {
+     background-color: #3A95FF;
+ }
+
+.cbp_tmlabel::before {
+	#triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-right: 100px solid red;
+	border-bottom: 50px solid transparent;
+}
 }

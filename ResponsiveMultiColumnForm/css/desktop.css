@@ -1,0 +1,17 @@
+@media (min-width: 1101px) and (max-width: 2000px){
+  .cbp-mc-form {
+  text-align: center;
+
+  }
+
+  .cbp-mc-column {
+
+    /*border: 1px solid orange;*/
+    display: inline-block;
+    vertical-align: middle;
+    width: 31%;
+    margin: 0;
+  }
+
+
+}

@@ -31,16 +31,20 @@
 
 //Attempted beast mode below
 
-document.qs("input.new-todo")
-    .addEventListener("change", storeNew (), true);
-document.qs("input.new-todo")
-    .addEventListener("change", storeNew (), true);
+// document.querySelector("input.new-todo")
+//   .addEventListener("keyup", storeNew (), true);
+
+var newTodo = document.querySelector("input.new-todo");
+newTodo.addEventListener("change", storeNew); // listen to any change in values, same as the original
+
+var todoList = []; // store new lists
 
 function storeNew () {
-  //store string
+    console.log(newTodo.value); // prints current
+    todoList.push(newTodo.value); // store current value to array. may not be useful.
 }
 
-document.qs("label")
-        .addEventListener("dblclick", function (){
-          //edit string
-        })
+// document.querySelector("label")
+//         .addEventListener("dblclick", function (){
+//           //edit string
+//         })
