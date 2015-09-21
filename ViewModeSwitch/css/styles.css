@@ -40,10 +40,89 @@ body {
   width: auto;
 }
 
-header {
+/*header {
   width: 85%;
   margin: 4% 7.55%;
+}*/
+
+header {
+  text-align: left;
+  /*border: 1px solid orange;*/
+  color: #47a3da;
+  width: 80%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
 }
+
+header .bp-icon-about {
+  /*border: 1px solid green;*/
+  letter-spacing: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+}
+
+header h1 {
+  /*border: 1px solid red;*/
+  display: inline;
+  vertical-align: bottom;
+  font-size: 2.125em;
+  font-weight: 400;
+}
+
+header a {
+  float: right;
+  display:inline-block;
+  vertical-align: bottom;
+  border-radius: 50%;
+  margin: 0 0.1em;
+  border: 4px solid #47a3da;
+  width: 2.5em;
+  height: 2.5em;
+  background: #fff;
+}
+
+.bp-icon::after {
+  /*font-family: 'bpicons';
+  speak: none;
+  text-align: center;
+  color: #47a3da;*/
+  font-family: 'bpicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+  color: #47a3da;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+
+}
+
+.bpi-icon-prev::after {
+  content: "\e004";
+}
+
+.bpi-icon-next::after {
+  content: "\e000";
+}
+
+.bpi-icon-drop::after {
+  content: "\e001";
+}
+
+.bpi-icon-archive::after {
+  content: "\e002";
+}
+
+
+
+
+
 
 .main {
   width: 85%;
@@ -100,6 +179,7 @@ ul{
   font-size: 2em;
   margin: 0;
   text-align: center;
+  font-weight: bold;
 }
 
 .cbp-vm-view-grid li .cbp-vm-price {
