@@ -15,7 +15,7 @@
 
 
 
-* {
+body {
   font-family: 'Lato', Calibri, Arial, sans-serif;
   /*border: 1px solid magenta;*/
 }
@@ -24,6 +24,7 @@
 
 body {
     background-color: #FFF;
+		box-sizing: border-box;
 }
 
 .main {

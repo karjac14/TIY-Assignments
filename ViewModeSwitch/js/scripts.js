@@ -21,21 +21,21 @@ console.log (aList);
 
 
 function clickGrid (clickButton) {
-  var curButton = clickButton.currentTarget; // targets the current element which is grid
+  // var curButton = clickButton.target; // targets the current element which is grid
   divVm.className = "cbp-vm-switcher cbp-vm-view-grid"; //assigns classes to parent div
-  curButton.className = "cbp-vm-icon cbp-vm-grid cbp-vm-selected";
+  aGrid.className = "cbp-vm-icon cbp-vm-grid cbp-vm-selected";
   aList.className = "cbp-vm-icon cbp-vm-list"; //assigns classes to list a tag
 }
 
 function clickList (clickButton) {
-  var curButton = clickButton.currentTarget; // targets the current element which is list
+  // var curButton = clickButton.target; // targets the current element which is list
   divVm.className = "cbp-vm-switcher cbp-vm-view-list"; //assigns classes to parent div
-  curButton.className = "cbp-vm-icon cbp-vm-list cbp-vm-selected";
+  aList.className = "cbp-vm-icon cbp-vm-list cbp-vm-selected";
   aGrid.className = "cbp-vm-icon cbp-vm-grid"; //assigns classes to grid a tag
 }
 
-aGrid.addEventListener('click', clickGrid, true); //listens clicks at grid icon
-aList.addEventListener('click', clickList, true); //listens clicks at list icon
+aGrid.addEventListener('click', clickGrid, false); //listens clicks at grid icon
+aList.addEventListener('click', clickList, false); //listens clicks at list icon
 
 
 
