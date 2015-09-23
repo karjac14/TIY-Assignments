@@ -81,6 +81,43 @@ The correct order is:
 Many tags have optional attributes that use values to modify the tag's behavior. The <P> (paragraph) tag's ALIGN attribute, for instance, lets you change the default (left) paragraph alignment. For example, <P ALIGN=CENTER> centers the next paragraph on the page. [2]
 . . .
 
+
+
+## ``<ul>``
+
+unordered list element (<ul>) represents an unordered list of items, namely a collection of items that do not have a numerical ordering, and their order in the list is meaningless. Typically, unordered-list items are displayed with a bullet, which can be of several forms, like a dot, a circle or a squared. The bullet style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property.
+
+* _parents_: div, section, article
+* _content_: sectioning root, flow content
+* _display_: `block`, `inline`, `inline-block`
+
+### Attributes
+
+## ``<ol>``
+
+represents an ordered list of items. Typically, ordered-list items are displayed with a preceding numbering, which can be of any form, like numerals, letters or Romans numerals or even simple bullets. This numbered style is not defined in the HTML description of the page, but in its associated CSS, using the list-style-type property.
+
+
+* _parents_: div, section, article
+* _content_: sectioning root, flow content
+* _display_: `block`, `inline`, `inline-block`
+
+### Attributes
+
+## ``<dl>``
+
+Description List Element encloses a list of pairs of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).
+
+
+* _parents_: div, section, article
+* _content_: sectioning root, flow content
+* _display_: `block`, `inline`, `inline-block`
+
+### Attributes
+
+
+
+
 ###### Footnotes
 
 [1](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#Flow_content)
