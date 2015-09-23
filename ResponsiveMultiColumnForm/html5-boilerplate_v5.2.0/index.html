@@ -15,13 +15,74 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
+      <header>
+        <span>My own website now </span>
+        <h1> Let me get your details and sell it. </h1>
+        <nav>
+          <a href="" >back</a>
+          <a href="" >forward</a>
+          <a href="" >home</a>
+          <a href="" >help</a>
+        </nav>
+     </header>
+        <div>
+          <form>
+            <div class ="form_column">
+              <label for="firsname">First Name</label>
+              <input id="firstname" type="text" name="first_name" placeholder="Freddie"></input>
+              <label for="lastname">Last Name</label>
+              <input id="lastname" type="text" name="last_name" placeholder="Mercury"></input>
+              <label for="email">Email</label>
+              <input id="email" type="text" name="email_add" placeholder="FM@sample.com"></input>
+              <label for="email">Email</label>
+              <select id="country" name="email_add" placeholder="Country">
+                <option>Thailand</option>
+                <option>Philippines</option>
+                <option>Malaysia</option>
+                <option>Vietnam</option>
+              </select>
+              <label for="biography" >Biography</label>
+              <textarea id="biography" type="text" name="email_add" placeholder="When I was young..."></textarea>
+            </div>
+            <div class ="form_column">
+              <label for="phone">Phone</label>
+              <select id="phone" name="phone_no" placeholder="919-9999999">
+              <label for="affili" >Affiliations</label>
+              <textarea id="affili" type="text" name="email_add"></textarea>
+              <label for="occu" >Occupation</label>
+              <select id="occu" name="occu" placeholder="Occupation">
+                <option>Software Engineer</option>
+                <option>Front End Engineer</option>
+                <option>Web Designer</option>
+                <option>Others</option>
+              </select>
+              <label for="catname">Cat's Name</label>
+              <input id="catname" type="text" name="cat_name" placeholder="Felix"></input>
+              <label for="catname">Favorite Gadget</label>
+              <input id="catname" type="text" name="cat_name" placeholder="Felix"></input>
+            </div>
+            <div class ="form_column">
+              <label for="talent" >Type of Talent</label>
+              <select id="talent" name="talent" placeholder="">
+                <option>Choose a talent</option>
+                <option>Sing</option>
+                <option>Dance</option>
+                <option>Act</option>
+              </select>
+              <label for="drink">Favorite Drink</label>
+              <input id="drink" type="text" name="drink" placeholder="Green tea"></input>
+              <label for="power">Favorite Gadget</label>
+              <input id="power" type="text" name="power" placeholder="Anti-Gravity"></input>
+              <label for="weapon">Favorite Gadget</label>
+              <input id="weapon" type="text" name="weapon" placeholder="LightSaber"></input>
+              <label for="comment" >Affiliations</label>
+              <textarea id="comment" type="text" name="comment"></textarea>
+            </div>
+            <div class="form-submit">
+              <input class="form-button-submit" type="submit" value="Send Your Data">
+            </div>
+          </form>
+        </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
