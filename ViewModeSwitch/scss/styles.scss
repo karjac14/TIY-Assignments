@@ -1,93 +1,52 @@
-/*grid.html practice
-.col-66 {
-  width: 66.66%;
-  background-color: orange;
-  font-size: 2em
-}
-
-.col-33 {
-  width: 33.33%;
-  background-color: yellow;
-  font-size: 0.66em;
-}
-
-li:last-of-type {
-  float: left;
-  padding-right: 0px;
-
-}
-
-*/
 
 *, *::before, *::after {
   box-sizing: border-box; /* a genuis way not get confused with box models */
 }
-
-
-
-
 body {
   width: auto;
   font-family: 'Lato', Calibri, Arial, sans-serif;
   color: #47a3da;
-
   .container {
     width: auto;
-  }
-}
+    header {
+      text-align: left;
+      color: #47a3da;
+      width: 80%;
+      margin-top: 5%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3%;
 
+      .bp-icon-about {
+        letter-spacing: 0.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        text-transform: uppercase;
+      }
+      h1 {
+        display: inline;
+        vertical-align: bottom;
+        font-size: 2.125em;
+        font-weight: 400;
+      }
+      a {
+        float: right;
+        display:inline-block;
+        vertical-align: bottom;
+        border-radius: 50%;
+        margin: 0 0.1em;
+        border: 4px solid #47a3da;
+        width: 2.5em;
+        height: 2.5em;
+        background: #fff;
+      }
 
-
-/*header {
-  width: 85%;
-  margin: 4% 7.55%;
-}*/
-
-header {
-  text-align: left;
-  /*border: 1px solid orange;*/
-  color: #47a3da;
-  width: 80%;
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 3%;
-
-  .bp-icon-about {
-    /*border: 1px solid green;*/
-    letter-spacing: 0.5em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
-    text-transform: uppercase;
-  }
-  h1 {
-    /*border: 1px solid red;*/
-    display: inline;
-    vertical-align: bottom;
-    font-size: 2.125em;
-    font-weight: 400;
-  }
-  a {
-    float: right;
-    display:inline-block;
-    vertical-align: bottom;
-    border-radius: 50%;
-    margin: 0 0.1em;
-    border: 4px solid #47a3da;
-    width: 2.5em;
-    height: 2.5em;
-    background: #fff;
-  }
-
-}
-
+    } //header
+  } //.container
+} // body
 
 .bp-icon::after {
-  /*font-family: 'bpicons';
-  speak: none;
-  text-align: center;
-  color: #47a3da;*/
   font-family: 'bpicons';
   speak: none;
   font-style: normal;
@@ -101,26 +60,6 @@ header {
 
 }
 
-.bpi-icon-prev::after {
-  content: "\e004";
-}
-
-.bpi-icon-next::after {
-  content: "\e000";
-}
-
-.bpi-icon-drop::after {
-  content: "\e001";
-}
-
-.bpi-icon-archive::after {
-  content: "\e002";
-}
-
-
-
-
-
 
 .main {
   width: 85%;
@@ -129,8 +68,6 @@ header {
 
   #cbp-vm {
     width: auto;
-    /*margin-left: 5%;
-    margin-right: 5%;*/
 
     .cbp-vm-options {
       text-align: right;
@@ -149,17 +86,7 @@ header {
   }
 
 }
-
-
-
-
-
-
-
-
 /* Default View - Grid */
-
-
 .cbp-vm-view-grid {
   li {
     width: 33%;
@@ -170,8 +97,6 @@ header {
     text-align: center;
     vertical-align: top;
     position: relative;
-    /*font-weight: 300;
-    line-height: 1.4;*/
     a {
       display: block;
       text-align: center;
@@ -209,10 +134,7 @@ header {
   }
 
 }
-
-
 /* View - List */
-
 
 div.cbp-vm-view-list {
   ul{
