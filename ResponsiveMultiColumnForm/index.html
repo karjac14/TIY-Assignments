@@ -9,7 +9,7 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -17,7 +17,7 @@
     <body>
       <header>
         <span>My own website now </span>
-        <h1> Let me get your details and sell it. </h1>
+        <h1> Three Column Forms </h1>
         <nav>
           <a href="" >back</a>
           <a href="" >forward</a>
@@ -25,9 +25,9 @@
           <a href="" >help</a>
         </nav>
      </header>
-        <div>
-          <form>
-            <div class ="form_column">
+        <div class ="main">
+          <form class = "all-form">
+            <div class ="column-form">
               <label for="firsname">First Name</label>
               <input id="firstname" type="text" name="first_name" placeholder="Freddie"></input>
               <label for="lastname">Last Name</label>
@@ -44,9 +44,9 @@
               <label for="biography" >Biography</label>
               <textarea id="biography" type="text" name="email_add" placeholder="When I was young..."></textarea>
             </div>
-            <div class ="form_column">
+            <div class ="column-form">
               <label for="phone">Phone</label>
-              <select id="phone" name="phone_no" placeholder="919-9999999">
+              <input id="phone" name="phone_no" placeholder="919-9999999">
               <label for="affili" >Affiliations</label>
               <textarea id="affili" type="text" name="email_add"></textarea>
               <label for="occu" >Occupation</label>
@@ -61,7 +61,7 @@
               <label for="catname">Favorite Gadget</label>
               <input id="catname" type="text" name="cat_name" placeholder="Felix"></input>
             </div>
-            <div class ="form_column">
+            <div class ="column-form">
               <label for="talent" >Type of Talent</label>
               <select id="talent" name="talent" placeholder="">
                 <option>Choose a talent</option>
