@@ -1,0 +1,27 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  header {
+    display: block;
+    width: 90%;
+    color: cornflowerblue;
+    span {
+      font-size: 1em;
+      display: block;
+    }
+    h1 {
+      font-size: 2em;
+      display: inline;
+    }
+    nav {
+      float: right;
+
+      a {
+        font-size:  1.5em;
+      }
+
+    }
+  }
+}
