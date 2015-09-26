@@ -76,7 +76,7 @@ header a::hover, {
 
 /*body*/
 
-.cbp-mc-form {
+.all-form {
 
   display: block;
   position: relative;
@@ -88,7 +88,7 @@ header a::hover, {
 }
 
 
-.cbp-mc-column {
+.column-form {
 
   /*border: 1px solid orange;*/
   display: inline-block;
@@ -157,6 +157,7 @@ label {
   margin-left: auto;
   margin-right: auto;
   padding-top: 25px;
+	width: 25%;
 }
 
 .cbp-mc-submit:hover {
@@ -169,7 +170,7 @@ label {
   text-transform: uppercase;
   padding: 15px 40px;
   border: none;
-  width: auto;
+
 }
 
 
