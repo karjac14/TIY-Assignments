@@ -184,6 +184,45 @@ represents a caption for the content of its parent <fieldset>.
   * _content_: Phrasing content.
   * _display_: `block`, `inline`
 
+## ``<table>``
+
+  represents data in two dimensions or more.
+
+## ``<caption>``
+
+    represents the title of a table. Though it is always the first descendant of a <table>, its styling, using CSS, may place it elsewhere, relative to the table.
+
+## ``<col>``
+
+    defines a column within a table and is used for defining common semantics on all common cells. It is generally found within a <colgroup> element.
+
+## ``<tbody>``
+
+    defines one or more <tr> element data-rows to be the body of its parent <table> element (as long as no <tr> elements are immediate children of that table element.)  In conjunction with a preceding <thead> and/or <tfoot> element, <tbody> provides additional semantic information for devices such as printers and displays. Of the parent table's child elements, <tbody> represents the content which, when longer than a page, will most likely differ for each page printed; while the content of <thead> and <tfoot> will be the same or similar for each page printed. For displays, <tbody> will enable separate scrolling of the <thead>, <tfoot>, and <caption> elements of the same parent <table> element.  Note that unlike the <thead>, <tfoot>, and <caption> elements however, multiple <tbody> elements are permitted (if consecutive), allowing the data-rows in long tables to be divided into different sections, each separately formatted as needed.
+
+## ``<thead>``
+
+    defines a set of rows defining the head of the columns of the table.
+
+## ``<tfoot>``
+
+    defines a set of rows summarizing the columns of the table.
+
+## ``<tr>``
+
+    defines a row of cells in a table. Those can be a mix of <td> and <th> elements.
+
+## ``<tr>``
+
+    defines a row of cells in a table. Those can be a mix of <td> and <th> elements.
+
+## ``<td>``
+
+    defines a cell of a table that contains data. It participates in the table model.
+
+## ``<th>``
+
+    defines a cell that is a header for a group of cells of a table. The group of cells that the header refers to is defined by the scope and headers attribute.
 
 ###### Footnotes
 
