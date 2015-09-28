@@ -1,1 +1,162 @@
-*,*::before,*::after{box-sizing:border-box}body{width:auto;font-family:'Lato', Calibri, Arial, sans-serif;color:#47a3da}body .container{width:auto}body .container header{text-align:left;color:#47a3da;width:80%;margin-top:5%;margin-left:auto;margin-right:auto;margin-bottom:3%}body .container header .bp-icon-about{letter-spacing:0.5em;margin-top:10px;margin-bottom:10px;display:block;text-transform:uppercase}body .container header h1{display:inline;vertical-align:bottom;font-size:2.125em;font-weight:400}body .container header a{float:right;display:inline-block;vertical-align:bottom;border-radius:50%;margin:0 0.1em;border:4px solid #47a3da;width:2.5em;height:2.5em;background:#fff}.bp-icon::after{font-family:'bpicons';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;text-align:center;color:#47a3da;-webkit-font-smoothing:antialiased;overflow:hidden}.main{width:85%;margin:20px 7.5%;border:3px solid #47a3da}.main #cbp-vm{width:auto}.main #cbp-vm .cbp-vm-options{text-align:right;padding-bottom:20px;width:90%;margin:20px 5%;border-bottom:4px solid #47a3da}.main #cbp-vm ul{width:90%;margin:20px 5%;padding:0;display:table}.cbp-vm-view-grid li{width:33%;display:inline-block;padding-right:20px;margin:10px 0px;list-style:none;text-align:center;vertical-align:top;position:relative}.cbp-vm-view-grid li a{display:block;text-align:center;margin-top:5%}.cbp-vm-view-grid li h3{display:block;font-size:2em;margin:0;text-align:center;font-weight:bold}.cbp-vm-view-grid li .cbp-vm-price{display:block;font-size:1.5em;color:#c0c0c0;text-align:center}.cbp-vm-view-grid li .cbp-vm-details{display:block;max-width:300px;min-height:70px;margin:0 auto;text-align:center}.cbp-vm-view-grid li .cbp-vm-add{color:#fff;background:#47a3da;padding:10px 20px;border-radius:2px;margin:10px 0;display:inline-block;transition:background 0.2s}div.cbp-vm-view-list ul li{width:100%;height:auto;display:block;padding-right:0px;margin:30px 0px;list-style:none}div.cbp-vm-view-list ul li a{width:10%;margin:0;vertical-align:middle;text-align:center;display:inline-block}div.cbp-vm-view-list ul li a img{width:100%;height:100%;margin:0;padding:0}div.cbp-vm-view-list ul li h3{width:23%;margin:0 1%;vertical-align:middle;font-size:1.5em;font-weight:bold;text-align:left;display:inline-block}div.cbp-vm-view-list ul li .cbp-vm-price{width:10%;margin:0 1%;vertical-align:middle;font-size:1.5em;color:#C0C0C0;text-align:left;display:inline-block}div.cbp-vm-view-list ul li div.cbp-vm-details{max-width:30%;margin:0 1%;vertical-align:middle;text-align:left;display:inline-block}div.cbp-vm-view-list ul li .cbp-vm-add{width:auto;margin:0 1%;vertical-align:middle;color:#fff;background:#47a3da;padding:10px 20px;border-radius:2px;margin:10px 2%;display:inline-block;transition:background 0.2s}
+*, *::before, *::after {
+  box-sizing: border-box;
+  /* a genuis way not get confused with box models */ }
+
+body {
+  width: auto;
+  font-family: 'Lato', Calibri, Arial, sans-serif;
+  color: #47a3da; }
+  body .container {
+    width: auto; }
+    body .container header {
+      text-align: left;
+      color: #47a3da;
+      width: 80%;
+      margin-top: 5%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3%; }
+      body .container header .bp-icon-about {
+        letter-spacing: 0.5em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        text-transform: uppercase; }
+      body .container header h1 {
+        display: inline;
+        vertical-align: bottom;
+        font-size: 2.125em;
+        font-weight: 400; }
+      body .container header a {
+        float: right;
+        display: inline-block;
+        vertical-align: bottom;
+        border-radius: 50%;
+        margin: 0 0.1em;
+        border: 4px solid #47a3da;
+        width: 2.5em;
+        height: 2.5em;
+        background: #fff; }
+
+.bp-icon::after {
+  font-family: 'bpicons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-align: center;
+  color: #47a3da;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden; }
+
+.main {
+  width: 85%;
+  margin: 20px 7.5%;
+  border: 3px solid #47a3da; }
+  .main #cbp-vm {
+    width: auto; }
+    .main #cbp-vm .cbp-vm-options {
+      text-align: right;
+      padding-bottom: 20px;
+      width: 90%;
+      margin: 20px 5%;
+      border-bottom: 4px solid #47a3da; }
+    .main #cbp-vm ul {
+      width: 90%;
+      margin: 20px 5%;
+      padding: 0;
+      display: table; }
+
+/* Default View - Grid */
+.cbp-vm-view-grid li {
+  width: 33%;
+  display: inline-block;
+  padding-right: 20px;
+  margin: 10px 0px;
+  list-style: none;
+  text-align: center;
+  vertical-align: top;
+  position: relative; }
+  .cbp-vm-view-grid li a {
+    display: block;
+    text-align: center;
+    margin-top: 5%; }
+  .cbp-vm-view-grid li h3 {
+    display: block;
+    font-size: 2em;
+    margin: 0;
+    text-align: center;
+    font-weight: bold; }
+  .cbp-vm-view-grid li .cbp-vm-price {
+    display: block;
+    font-size: 1.5em;
+    color: #c0c0c0;
+    text-align: center; }
+  .cbp-vm-view-grid li .cbp-vm-details {
+    display: block;
+    max-width: 300px;
+    min-height: 70px;
+    margin: 0 auto;
+    text-align: center; }
+  .cbp-vm-view-grid li .cbp-vm-add {
+    color: #fff;
+    background: #47a3da;
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin: 10px 0;
+    display: inline-block;
+    transition: background 0.2s; }
+
+/* View - List */
+div.cbp-vm-view-list ul li {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-right: 0px;
+  margin: 30px 0px;
+  list-style: none; }
+  div.cbp-vm-view-list ul li a {
+    width: 10%;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+    display: inline-block; }
+    div.cbp-vm-view-list ul li a img {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0; }
+  div.cbp-vm-view-list ul li h3 {
+    width: 23%;
+    margin: 0 1%;
+    vertical-align: middle;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: left;
+    display: inline-block; }
+  div.cbp-vm-view-list ul li .cbp-vm-price {
+    width: 10%;
+    margin: 0 1%;
+    vertical-align: middle;
+    font-size: 1.5em;
+    color: #C0C0C0;
+    text-align: left;
+    display: inline-block; }
+  div.cbp-vm-view-list ul li div.cbp-vm-details {
+    max-width: 30%;
+    margin: 0 1%;
+    vertical-align: middle;
+    text-align: left;
+    display: inline-block; }
+  div.cbp-vm-view-list ul li .cbp-vm-add {
+    width: auto;
+    margin: 0 1%;
+    vertical-align: middle;
+    color: #fff;
+    background: #47a3da;
+    padding: 10px 20px;
+    border-radius: 2px;
+    margin: 10px 2%;
+    display: inline-block;
+    transition: background 0.2s; }

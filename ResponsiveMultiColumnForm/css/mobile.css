@@ -2,14 +2,14 @@
 
 @media (min-width: 319px) and (max-width: 598px){
 
-  .cbp-mc-form {
+  .all-form {
   text-align: center;
 
   }
 
 
 
-  .cbp-mc-column {
+  .column-form  {
    display: block;
    margin-left: 5%;
    margin-right: 5%;
