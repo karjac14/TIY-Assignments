@@ -4,7 +4,8 @@
   "description": "none",
   "main": "ROT13.js",
   "dependencies": {
-    "chai": "^3.2.0"
+    "chai": "^3.2.0",
+    "node-sass": "^3.3.3"
   },
   "devDependencies": {
     "mocha": "^2.3.1"
