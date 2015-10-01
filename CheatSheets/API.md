@@ -81,6 +81,34 @@ GET /users/:username
 		◦	What are some of the different values for the type field?
 
 
+### >How can I use the Github API to...
+				◦	get all the comments for a particular issue?
+					```
+					GET /user/issues  filter = comments
+					```
+				◦	add a comment to an issue?
+				```
+					POST /repos/:owner/:repo/issues/:number/comments
+				```
+				
+### >How can I use the jQuery API to...
+				◦	get the HTML contents of an element?
+				```
+				.html()
+				```
+				◦	create a new HTML element?
+				```
+				$("p").append("Some appended text.");
+				```
+				
+				◦	add an HTML element to the page?
+### >How can I use the Lodash API to...
+				◦	replace placeholders with values from an object?
+				
+				◦	repeat code for every item of an array
+				```
+				.forEach(collection, [iteratee=_.identity], [thisArg])
+				```
 
 
 
