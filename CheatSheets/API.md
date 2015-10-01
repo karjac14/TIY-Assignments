@@ -37,3 +37,50 @@ $ curl https://api.github.com/?access_token=OAUTH-TOKEN
 GET /users/:username
 ```
 . . .
+
+
+###> What are the endpoints for fetching...
+		◦	the profile data for a user?
+		```
+		- URL: https://api.github.com/users/USERNAME
+		```
+		◦	the organizations a user belongs to?
+		```
+		- URL: https://api.github.com/users/USERNAME/orgs
+		```
+		◦	the repositories a user has created?
+		```
+		- URL: https://api.github.com/users/USERNAME/repos
+		```
+		◦	a filtered list of repositories?
+		```
+		https://api.github.com/search/repositories?q={query}{&page,per_page,sort,order}
+		where in we change the last part according to the required filters
+		```
+		◦	a sorted list of repositories?
+		```
+		https://api.github.com/search/repositories?q={query}{sort}
+		where in we change the last part according to the required filters
+		```
+		◦	public events for a user?
+		```
+		- URL: https://api.github.com/users/USERNAME/events/public
+		```
+###> When fetching public events for a user...
+		◦	How many results are returned by default?
+		```
+		- The fixed page size is 30 items. Fetching up to ten pages is supported, for a total of 300 events.
+		```
+		◦	What limitations exist on fetching more results?
+		```
+		- Only events created within the past 90 days will be included in timelines. Events older than 90 days will not be included (even if the total number of events in the timeline is less than 300).
+		```
+		◦	What is the basic structure of the results?
+		◦	What fields are included in each result?
+		◦	What are the data types for each field?
+		◦	What are some of the different values for the type field?
+
+
+
+
+
