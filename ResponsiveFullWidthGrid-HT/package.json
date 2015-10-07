@@ -1,0 +1,22 @@
+{
+  "name": "responsivefullwidthgrid",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --directory --files='index.html', 'css/styles.css'",
+    "sass" : "node-sass src/scss/main.scss src/css/main.css"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karjac14/TIY-Assignments.git"
+  },
+  "author": "Karlo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karjac14/TIY-Assignments/issues"
+  },
+  "homepage": "https://github.com/karjac14/TIY-Assignments#readme"
+}

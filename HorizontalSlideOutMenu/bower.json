@@ -1,0 +1,22 @@
+{
+  "name": "HorizontalSlideOutMenu",
+  "version": "0.0.0",
+  "homepage": "https://github.com/karjac14/TIY-Assignments",
+  "authors": [
+    "Karlo Eleuterio <karloe@gmail.com>"
+  ],
+  "description": "HorizontalSlideOutMenu",
+  "main": "main.js",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "1.*"
+  }
+}
