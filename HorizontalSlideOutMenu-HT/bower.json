@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "1.*"
+    "jquery": "1.*",
+    "lato-font": "~1.1.1"
   }
 }
