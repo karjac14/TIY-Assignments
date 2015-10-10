@@ -68,6 +68,8 @@ body {
         }
         section.dropmenu {
           display:none;
+          color: gray;
+          background-color: white;
           &.active {
             display: block;
             float: left;

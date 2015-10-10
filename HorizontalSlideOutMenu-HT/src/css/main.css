@@ -134,7 +134,9 @@ body .container {
           outline: none;
           padding-right: 30px; }
         body .container nav.main-nav ul .main-menu section.dropmenu {
-          display: none; }
+          display: none;
+          color: gray;
+          background-color: white; }
           body .container nav.main-nav ul .main-menu section.dropmenu.active {
             display: block;
             float: left; }
