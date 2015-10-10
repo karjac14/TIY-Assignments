@@ -1,21 +1,26 @@
 //tggle for panels
 
-$('a[href="#nav-one"]').on('click', function(){
-  $('#nav-one').toggleClass('active');
+$('a#nav-one').on('click', function(){
+  $(this).toggleClass('active');
+  $('#panel-one').slideToggle('50');
 });
 
-$('a[href="#nav-two"]').on('click', function(){
-  $('#nav-two').toggleClass('active');
+$('a#nav-two').on('click', function(){
+  $(this).toggleClass('active');
+  $('#panel-two').slideToggle('50');
 });
 
-$('a[href="#nav-three"]').on('click', function(){
-  $('#nav-three').toggleClass('active');
+$('a#nav-three').on('click', function(){
+  $(this).toggleClass('active');
+  $('#panel-three').slideToggle('50');
 });
 
-$('a[href="#nav-four"]').on('click', function(){
-  $('#nav-four').toggleClass('active');
+$('a#nav-four').on('click', function(){
+  $(this).toggleClass('active');
+  $('#panel-four').slideToggle('50');
 });
 
-$('a[href="#nav-five"]').on('click', function(){
-  $('#nav-five').toggleClass('active');
+$('a#nav-five').on('click', function(){
+  $(this).toggleClass('active');
+  $('#panel-five').slideToggle('50');
 });
