@@ -115,16 +115,14 @@ body .container {
           color: #0567A0; }
   body .container nav.main-nav {
     display: block;
-    background-color: #47A3DA;
     margin-top: 0px;
-    width: 100%;
-    border: 2px solid #47A3DA; }
+    width: 100%; }
     body .container nav.main-nav ul {
-      width: 80%;
       margin: 0 auto; }
       body .container nav.main-nav ul .main-menu {
         vertical-align: top; }
         body .container nav.main-nav ul .main-menu a {
+          background-color: #47A3DA;
           text-decoration: none;
           color: #fff;
           font-size: 1.2em;
@@ -134,10 +132,11 @@ body .container {
           outline: none;
           padding-right: 30px; }
         body .container nav.main-nav ul .main-menu section.dropmenu {
-          display: none; }
+          display: none;
+          color: gray;
+          background-color: white; }
           body .container nav.main-nav ul .main-menu section.dropmenu.active {
-            display: block;
-            float: left; }
+            display: block; }
 
 body {
   font-family: lato, sans-serif; }
@@ -147,22 +146,218 @@ section {
   list-style: none; }
   section ul {
     list-style: none;
-    max-width: 20%;
-    min-width: 15%;
     margin: 0px 0px;
     padding: 10px 10px auto;
     display: inline-block;
     align-items: center; }
-    section ul li {
-      list-style: none;
-      width: 100%;
-      border: 0.5px solid gray;
+
+@media (min-width: 319px) and (max-width: 598px) {
+  body .container {
+    width: 100%; }
+    body .container header h2 {
       text-align: center; }
-      section ul li img {
-        height: 100px; }
-    section ul li:nth-child(2) {
-      font-size: 2em;
+    body .container header h1 {
+      float: none;
       text-align: center; }
+    body .container header nav {
+      float: none;
+      text-align: center; }
+    body .container .main-nav {
+      width: 100%; }
+      body .container .main-nav ul {
+        width: 100%;
+        margin: 0 0;
+        padding: 0px 0px; }
+        body .container .main-nav ul .main-menu {
+          width: 100%;
+          display: block; }
+          body .container .main-nav ul .main-menu a {
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding-left: 30px; }
+            body .container .main-nav ul .main-menu a.active {
+              color: #02639D; }
+            body .container .main-nav ul .main-menu a:after {
+              float: right;
+              content: "\2609"; }
+            body .container .main-nav ul .main-menu a.active:after {
+              color: #02639D;
+              float: right;
+              content: "\260B"; }
+          body .container .main-nav ul .main-menu section.dropmenu {
+            display: block;
+            padding: 0 0; }
+            body .container .main-nav ul .main-menu section.dropmenu ul {
+              display: block;
+              width: 100%;
+              height: auto;
+              margin: 0px 0px;
+              padding: 5px 50px;
+              border-bottom: 1px solid #DDDDDD; }
+              body .container .main-nav ul .main-menu section.dropmenu ul:after {
+                content: " ";
+                clear: both;
+                display: table; }
+              body .container .main-nav ul .main-menu section.dropmenu ul li.item-img {
+                float: left;
+                display: inline;
+                height: 100%; }
+                body .container .main-nav ul .main-menu section.dropmenu ul li.item-img img {
+                  max-height: 50px; }
+              body .container .main-nav ul .main-menu section.dropmenu ul li.item-title {
+                margin-left: 15px;
+                float: left;
+                display: inline;
+                width: auto;
+                height: 20px;
+                font-size: 1em; } }
+
+@media (min-width: 599px) and (max-width: 820px) {
+  body .container {
+    width: 100%; }
+    body .container header h2 {
+      text-align: center; }
+    body .container header h1 {
+      float: none;
+      text-align: center; }
+    body .container header nav {
+      float: none;
+      text-align: center; }
+    body .container .main-nav {
+      width: 100%; }
+      body .container .main-nav ul {
+        width: 100%;
+        margin: 0 0;
+        padding: 0px 0px; }
+        body .container .main-nav ul .main-menu {
+          width: 100%;
+          display: block; }
+          body .container .main-nav ul .main-menu a {
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding-left: 30px; }
+            body .container .main-nav ul .main-menu a.active {
+              color: #02639D; }
+            body .container .main-nav ul .main-menu a:after {
+              float: right;
+              content: "\2609"; }
+            body .container .main-nav ul .main-menu a.active:after {
+              float: right;
+              content: "\260B"; }
+          body .container .main-nav ul .main-menu section.dropmenu {
+            display: block;
+            padding: 0 0; }
+            body .container .main-nav ul .main-menu section.dropmenu ul {
+              display: inline-block;
+              float: left;
+              width: 33.33%;
+              height: auto;
+              margin: 0px 0px;
+              padding: 0px 0px;
+              border: 1px solid #DDDDDD;
+              align-items: center; }
+              body .container .main-nav ul .main-menu section.dropmenu ul:after {
+                content: " ";
+                clear: both;
+                display: table; }
+              body .container .main-nav ul .main-menu section.dropmenu ul li.item-img {
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+                height: 100%; }
+                body .container .main-nav ul .main-menu section.dropmenu ul li.item-img img {
+                  max-height: 150px;
+                  margin: 0 auto; }
+              body .container .main-nav ul .main-menu section.dropmenu ul li.item-title {
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+                width: auto;
+                height: 20px;
+                font-size: 1em; } }
+
+@media (min-width: 821px) and (max-width: 2100px) {
+  body .container {
+    width: 100%; }
+    body .container header h2 {
+      text-align: left; }
+    body .container header h1 {
+      float: left;
+      text-align: center; }
+    body .container header nav {
+      float: right;
+      text-align: center; }
+    body .container .main-nav {
+      width: 100%; }
+      body .container .main-nav ul {
+        background-color: #47A3DA;
+        width: 100%;
+        margin: 0 0;
+        padding: 0px 0px;
+        position: fixed; }
+        body .container .main-nav ul li.main-menu {
+          max-width: 250px;
+          display: inline-block; }
+          body .container .main-nav ul li.main-menu a {
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding-left: 30px; }
+            body .container .main-nav ul li.main-menu a.active {
+              color: #02639D; }
+            body .container .main-nav ul li.main-menu a:before {
+              float: right;
+              content: "\2609"; }
+            body .container .main-nav ul li.main-menu a.active:before {
+              float: right;
+              content: "\260B"; }
+          body .container .main-nav ul li.main-menu section.dropmenu {
+            display: none;
+            background-color: #FFFFFF;
+            position: absolute;
+            top: 60px;
+            left: 0px;
+            padding: 0 0;
+            width: 100vw; }
+            body .container .main-nav ul li.main-menu section.dropmenu:after {
+              content: " ";
+              clear: both;
+              display: table; }
+            body .container .main-nav ul li.main-menu section.dropmenu ul {
+              background-color: #FFFFFF;
+              display: inline-block;
+              position: static;
+              width: 16.66%;
+              height: auto;
+              margin: 0px 0px;
+              padding: 5px 0px;
+              border: 1px solid #DDDDDD;
+              align-items: center; }
+              body .container .main-nav ul li.main-menu section.dropmenu ul:after {
+                content: " ";
+                clear: both;
+                display: table; }
+              body .container .main-nav ul li.main-menu section.dropmenu ul li.item-img {
+                background-color: #FFFFFF;
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+                height: 100%; }
+                body .container .main-nav ul li.main-menu section.dropmenu ul li.item-img img {
+                  max-height: 150px;
+                  margin: 0 auto; }
+              body .container .main-nav ul li.main-menu section.dropmenu ul li.item-title {
+                background-color: #FFFFFF;
+                text-align: center;
+                margin: 0 auto;
+                display: block;
+                width: auto;
+                height: 20px;
+                font-size: 1em; }
+          body .container .main-nav ul li.main-menu section.texts {
+            width: 100vw; } }
 
 /* ==========================================================================
    Helper classes

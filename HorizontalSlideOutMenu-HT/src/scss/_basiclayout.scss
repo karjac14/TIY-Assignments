@@ -47,16 +47,15 @@ body {
 
     nav.main-nav {
       display: block;
-      background-color: #47A3DA;
       margin-top: 0px;
       width: 100%;
-      border: 2px solid #47A3DA;
       ul {
-        width: 80%;
         margin: 0 auto;
+
         .main-menu {
           vertical-align: top;
         a {
+          background-color: #47A3DA;
           text-decoration: none;
           color: #fff;
           font-size: 1.2em;
@@ -65,12 +64,14 @@ body {
           position: relative;
           outline: none;
           padding-right: 30px;
+
         }
         section.dropmenu {
           display:none;
+          color: gray;
+          background-color: white;
           &.active {
             display: block;
-            float: left;
           }
         }
 
