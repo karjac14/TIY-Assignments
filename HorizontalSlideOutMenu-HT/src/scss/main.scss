@@ -95,7 +95,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 @import 'grid';
-@import '_basiclayout';
+@import 'basiclayout';
+@import 'contents';
+@import 'responsiveness';
 
 
 
