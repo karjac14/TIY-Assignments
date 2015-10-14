@@ -20,3 +20,23 @@
 
 	####How can I authenticate my request? (what methods)
 	Etsy API uses OAuth 1.0 to give developers access to an Etsy member's private account data
+	
+###What Resource in the API represents...
+	####an individual product?
+	[Listing](https://www.etsy.com/developers/documentation/reference/listing)
+	####a group or collection of products?
+	[Taxonomy](https://www.etsy.com/developers/documentation/reference/taxonomy)
+	####images associated with a product?
+	[ListingImage](https://www.etsy.com/developers/documentation/reference/listingimage)
+	####sizes and colors for a product?
+	[Style](https://www.etsy.com/developers/documentation/reference/style)
+	
+###What actions and endpoints exist for each of these Resources?
+###What parameters do each endpoint require or accept?
+
+###What fields are returned for each Resource, specifically:
+	####an individual product?
+	####a group or collection of products?
+
+###What additional fields can be requested for each?
+
